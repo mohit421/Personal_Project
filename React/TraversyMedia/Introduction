@@ -1,0 +1,203 @@
+## What is React?
+- React is a JavaScript Library/framework for building user interfaces. It was created by Facebook
+- Websites/UIs are looked at in terms of components. 
+- React is currently the most popular out of the major front-end frameworks
+
+- It's a UI library to be specific and the difference is that a framework is complete solution so angular for instance is a full-featured framework bcuz it includes a router an http client state management library and much more
+- The reason that react is often referred to as a framework is because it operates like one and it's a direct competition with framework like angular 
+and It's a most popular out of themajor front-end frameworks which are react, vue.js , angular and spelt
+- and it's often used with other library such a react router to create fullfeatured solution also the ecosystem of react is huge so it can be used for a wide variety of application such as Single page apps and servers side rendered application and static websites
+
+
+<!-- ------------- -->
+
+Why React?
+
+- React allows us to build very dynamic and interacrive websites and user interfaces.
+- Very Fast, especially with the new compiler.
+- There is a huge ecosystem from Next.js to React Native
+- Best framework to learn to get a job
+
+
+<!--  -->
+## Components
+
+- Resuable pience of code that can be used to build elemens
+on the page
+- Allow us to break down complex UIs, which makes them easier to maintain and scale
+- Components can get props passed in and can hold their own sate
+
+<!--  -->
+
+## State
+- it represents the data that a component manages internally.
+- This could be form input data, fetched data, UI-related data like if a modal is open/close
+- There is also global state, which relates to the app as a whole and not a single component.
+- we can also use a third-party state management system like redux
+
+<!--  -->
+
+## Hooks
+- Allows us to use state and other react features within functional components
+ - useState
+ - useEffect        useContext, useMemo & useCallback
+ - useRef           will be phased out in react 19
+ - useReducer
+
+<!--  -->
+
+## JSX (JavaScript Syntax Extension)
+
+- An HTML-like syntax within JavaScript(components)
+
+## SPA, SSR & SSG
+- Single Page App - Load a single HTML file and JavaScript loads the entire UI including routes.
+
+- Server-Side Rendered - Server sends fully rendered page to client. You can fetch data and load it as well 
+for eg: next.js  , SSR use something like vercel or netlify
+
+- Static Site Generation - React generates static HTMl files at build time. These are very fast.
+for eg: Gatsby, astro
+
+
+<!--  -->
+## Vite
+- Vite is a super fast front-end toolkit that can be used for all kinds of JS projects including React.
+- It is built on top of ESBuild, which is a very fast JS bundler.
+- Fast development server with hot-reload.
+- Installed with npm create vite@latest
+
+<!--  -->
+
+- npm come with nodejs so we have to install it.
+
+<!--  -->
+- index.html : this is SPA that is in main.tsx will run through JS
+- there is div with id as "root"
+- Entry point is main.jsx file
+- there is library react , ReactDOM(which allow it work with document object model or the browser and then on that react DOM objedt we have a create root and that get passed in as element and as you can see we selecting that as root element by ID and then we are calling render method the we are render what ever we want as a application in this case)
+- We have app component that is coming from App.jsx
+-  we can cahgne this <App /> componnet with anything we want
+- and the style is bcuz of ./index.css file
+- In this we also have StrictMode which is wrapper component that'll check for potential problem in our app
+-  Check the things like deprecated and unsafe lifecycle method legacy context API usage things like that
+
+<!--  -->
+- There are two css file 
+1. index.css
+2. App.css
+- We are be gonna using Tailwind css so we need to install that and set it up
+- let's keep the index.css and delete App.css
+
+
+<!--  -->
+- App.jsx is our main component
+- and basically this is all the stuff we see right now on the homepage
+- wipe that away and just create basicallya an empty component
+- Now components can their functions and we can do a regular function so for instance we could do function app we can do an arrow function so con app and then use an arrow and we can type it out if we want but suggest by traversy media is to use extension name ( ES7 + React/Redux/React-Native snippets)
+- type : rafce + enter - for arrow funcction and export at bottom
+- rfc : for regular function 
+
+
+<!--  -->
+- get rid of index.css clear all 
+
+<!-- Setup your tailwind css -->
+go to site : https://tailwindcss.com/docs/guides/vite
+- run below mentioned command
+- $ npm install -D tailwind css postcss autoprefixer
+- $ npx tailwind css init -p
+
+  <!-- -------------------------> 
+- include below in tailwind.config.js
+/** @type {import('tailwind css').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+- Include below in index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+<!-- JSX Crash course basic -->
+```
+// // JSX crash course
+
+// import React from 'react'
+
+// const App = () => {
+//   const name = "John";
+//   const x = 10;
+//   const y = 20;
+//   const names = ['Mohit','John','Umang','Kisan','Rishabh'];
+//   const loggedIn = true;
+//   const styles = {
+//     color: 'red',
+//     fontSize: '55px',
+//   }
+
+//   // We can use like below if condition
+
+
+//   // if(loggedIn){
+//   //   return <h1>Hello Member</h1>;
+//   // }
+
+//   return (
+//     <>
+//       <div className='text-5xl'>App</div> 
+//       {/* <h1 style = {{color: 'red', fontSize: '24px'}}>Hello {name}</h1> */}
+//       {/* If we want to use incline styling use like below */}
+//       <h1 style = {{color: 'green', fontSize: '28px'}}>Hello {name}</h1>
+      
+//       {/* If we want to use variable style then use like below */}
+//       <p style={styles}>Hello {name}</p>
+//       <p> The Sum of {x} and {y} is {x+y} </p>
+//       {/* Below one gives error in console */}
+//       {/* <ul>
+//         {names.map((name)=>(
+//           <li>{name}</li>
+//         ))}
+//       </ul> */}
+
+//     {/* to get rid off error in console */}
+//       <ul>
+//         {names.map((name, index)=>(
+//           <li key={index}>{name}</li>
+//         ))}
+//       </ul>
+//       {/* We can do all kind of dynamic stuff below in place of hello member and Hello guest */}
+//       {/* {loggedIn ? "Hello Member" : "Hello Guest"} */}
+//       {loggedIn  && <h1>Hello Member</h1>
+//       }
+//     </>
+    
+//   )
+// }
+
+// export default App
+
+```
+<!-- ------------------------------- -->
+
+<!--  -->
+- <> </> : We call this one fragments
+<!-- ------------- After copying all code from theme file 
+link https://github.com/bradtraversy/react-crash-2024/blob/main/_theme_files/index.html -->
+
+-- we want to break everything in components what we copy from index.html from theme file
+
+- So in src folder -> we create new folder called components inside that navbar.jsx
+- Component can have js/jsx (using javascript) and ts/tsx (using typescript) extensions
+- Start from top to bottom 
+- Navbar
