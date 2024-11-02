@@ -201,3 +201,222 @@ link https://github.com/bradtraversy/react-crash-2024/blob/main/_theme_files/ind
 - Component can have js/jsx (using javascript) and ts/tsx (using typescript) extensions
 - Start from top to bottom 
 - Navbar
+
+<!-- How breakdown our code into components -->
+- Navbar.jsx
+- Card.jsx
+- HomeCards.jsx
+etc...
+
+- We also learn how to use "Props" and defaults props
+- Using Card.jsx we learn how to use wrapper components
+- How to use variable for making tailwind css and for others too
+- We can use props to not only change the content but to also change the styling 
+
+<!-- JobListings Components -->
+-  We comes to browse jobs and now we want to work with data a little bit now we don't have a backend yet so we're not going to be fetching these jobs just yet what we'll do fo now is just use a json file 
+- In Src folder "jobs.json" file 
+- We want only array of jobs and we can bring this into the file where we need it now we could bring it into the close "HomeCards"
+- We want to make app.jsx component clean 
+- We put listings into its won component and we have single listing component which will be we know this this block so in components let's create a new file and we'll call this job listings.jsx 
+- Data is hard coded but we want it to come from json file 
+
+
+<!-- Create list with map() -->
+- Create a single div by copy pasting 1st job list and paste into map function.
+
+- for all html inside map we can make a single component using single listing jobs
+
+- JobListing.jsx component copy an past div section rom map into it
+
+<!--  Limit Jobs to 3 on home page -->
+- Can be done by using `const recentjobs = jobs.slice(0,3);`
+- and replace `jobs.map()-> recentjobs.map()`
+
+
+<!-- useState() hook and Desc Toggle -->
+
+- Like we have more paragraph and I want to show more and show less state
+- There are two types of states
+  - components state like navbar, hero
+  - We have app level or Global state
+
+- Component State
+  - go into JobListing component
+  - we want to show more and show less button in our paragraph of cards under browse jobs
+  - basically we'll have a piece of State called show full description we can change that if we clicked on button
+  - first import {useState} from 'react'
+  - then use like this
+  ```
+   const [showFullDescription, setShowFullDescription] = useState(false);
+  let description = job.description;
+  if(!showFullDescription){
+    description = description.substring(0,110) + '...';
+  }```
+
+<!-- Creating an events in JobListing file and updateign component state -->
+  - use button and add onClick event make sure to pass in function prevState or something like this that's the good way of doing this otherwise may be we can run into issues
+  - We have a hamburger menu 
+  - then we can use menuOpen and setMenuOpen  something like that in the same way we can do for that too
+
+
+<!-- React Icons Package -->
+
+- Home page being done we have i tag doesn't showing anything
+- we don't have font awesome cdn
+- We don't want cdn we want separate package for that
+- This will kind of give us a little bit of experience of using additional packages
+- npm i react-icons
+- this will allows us work to not only font awesome but material icons and some of the other packages as well 
+- We can go in any component
+- Go to JobListing.jsx 
+- import { FaMapMarker } from 'react-icons/fa'
+- replace i tag with FaMapMarker
+
+
+<!-- React Router Setup -->
+
+- We want to start to add additional pages right we want the jobs page the ad job page so we can't do that just react.
+- So this where we talked about earlier a library vs a Framework 
+- Being a library doesn't have a way to add separate pages.
+- So we gonna use separate pages so we're going to use react router which is basically the official router for react but it is a separate package so we need to install it.
+- npm i react-router-dom
+- we put the routing stuff in the main app.jsx file
+- It's a pretty big package , it's built the remix framework which is server side rendering framework for react 
+- it's built on top of react router 
+- So there is a we can alot we can do
+  - We are going to get into some stuff lie data loaders that react-routers offers 
+- check App.jsx page to know how to create routes and we can add multiple pages 
+- let's import few things from react-router-dom
+- The way that this will work above the return in the App.jsx main app component we're going to create a variable called router and set that to createBrowserRouter which does just that it will create our router and that we're going to then use create routes from elements inside that we are going to use Routes components 
+- we can put path there but this is gonna for homepage so we will
+actually put an index and have element that represent that route
+```
+const router = createBrowserRouter(
+  createRoutesFromElements(<Route index element={<h1> My App</h1>} />)
+);
+```
+- Above is not going to do anything bcuz we haven't implemented the provider yet
+- Provider is what it provide the router and that's going to go down in return 
+- we have to copy and delet all components in return we use it in different ways
+
+<!-- Create routes from elements and router provider -->
+'''
+// ````````````````````````` Start Home Page '''''''''''''''''''''''''''''''
+
+import { 
+  Route, 
+  createBrowserRouter, 
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
+import React from 'react';
+import Navbar from '../src/components/Navbar';
+import Hero from './components/Hero';
+import HomeCards from './components/HomeCards';
+import JobListings from './components/JobListings';
+import ViewAllJobs from './components/viewAllJobs';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route index element={<h1>Welcome to My App</h1>} />)
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+  
+};
+
+export default App
+
+```
+- this will print welcome to My app on browser
+- for changing path we can use below that will be shown on route localhost:300/about
+```
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/about element={<h1>Welcome to My App</h1>} />)
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+  
+};
+
+```
+
+
+<!-- HomePage Component/Route  -->
+- create a separate folder in components pages
+- Layout
+- Pages
+
+etc
+
+<!-- Link Component -->
+
+- While clicking and go to other pages page refreshes
+- use Link inplace of a tag and to instead of href
+- It will become very fast and no refresh load thing in the title
+
+
+<!--  Custom 404 Page -->
+- We can add NotFoundPage if any page were not found like '*'
+- Change Link tag to NavLink this work as the same way like Link
+- Home link has a class of bg-black, So Basically we want to show that bg-black on whatever the active pages now we can do that by bringing in something link NavLink instead of Link which works it works in a very similar way except it adds a class to the active link
+
+<!-- Active Links with NavLink -->
+- Conditional Rendering
+
+
+<!-- Json Server Setting -->
+
+- While clicking on Read More we go to jobs/job.id
+- Before that let's switch from just bringing in a JSON file to actually fetching data from Backend 
+- To do this we're going to use something called JSON server .
+- Which is fantastic library that basically lets us create mock API and we can send get, post, put, patch, delete, and requests
+so we can create CRUD functionality it can be any resource you want have to do is create JSON file which we already have 
+and we can put any type of resource we want in it.
+- so we cna use our existing JSON file we just have to basically put back what we changed we was make in an object that has a Jobs , a named jobs array and then we can install JSON server and then we can simply run it 
+- Go to the site: [JSON Server](https://www.npmjs.com/package/json-server)
+
+- set '"server": "json-server --watch src/jobs.json --port 8000"'
+- run on terminal : - npm run server 
+- then we can see endpoints of localhost:8000/jobs
+- If we go on browser then we can see our DATA 
+- If we go on jobs/id then we can see single post 
+- It is just like we have built RESTAPI with express/Djnago/Flask or anything else 
+- We can also make post request and add one and it will added to the actual JSON file we can edit we can send a put request and send a delete request 
+- So, essentially we now have a Backend, So where I want to fetch this data is going be from the job listings components because that's where that's the only place in this application where we need the jobs because we're using this component on both we can't see it now but we are using it on the homepage and on the jobs page.
+- So, let's change this up a little bit we are no longer going to just bring in the jobs file we are going to make a request and we're going to do that inside of a use effect hook
+- Because what the use effect hook does is it allows our components to have side effects and we want a side effect of fetching data when the component renders and when we get those jobs from the API we want to put them in state so we also want to bring in used state 
+- After this was coming from API 
+
+
+<!-- Loading Spinner -->
+- npm i react-spinners
+- We can use react spinner 
+
+<!-- Conditional Fetching -->
+
+- ```
+ const apiUrl = isHome ? 'http://localhost:8000/jobs?_limit=3' : 'http://localhost:8000/jobs';
+        try {
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+          setJobs(data);
+
+        } catch (error){
+          console.log("error fetching data", error);
+        }
+        finally {
+          setLoading(false);
+        }
+```
+
+
+<!--  Proxying  -->
+
+
+

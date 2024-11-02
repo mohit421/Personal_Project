@@ -1,5 +1,3 @@
-// ````````````````````````` Start Home Page '''''''''''''''''''''''''''''''
-
 import { 
   Route, 
   createBrowserRouter, 
@@ -11,6 +9,7 @@ import React from 'react';
 import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout';
 import JobPage from './pages/JobPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,8 +17,11 @@ const router = createBrowserRouter(
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path='/jobs' element={<JobPage />} />
+      {/* Any page that not found we just go there */}
+      <Route path='*' element={<NotFoundPage />} />
     </Route>
   )
+
     // <Route path='/about' element={<h1>Welcome to My App</h1>} />)
     // (
     // <>
