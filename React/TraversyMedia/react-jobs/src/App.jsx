@@ -8,15 +8,20 @@ import React from 'react';
 
 import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout';
-import JobPage from './pages/JobPage';
+import JobsPage from './pages/JobsPage';
+import JobPage, {jobLoader } from './pages/JobPage';
 import NotFoundPage from './pages/NotFoundPage';
+import AddJobPage from './pages/AddJobPage';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     // <Route index element={<h1>Welcome to My App</h1>} />)
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />} />
-      <Route path='/jobs' element={<JobPage />} />
+      <Route path='/jobs' element={<JobsPage />} />
+      <Route path='/add-job' element={<AddJobPage />} />
+      <Route path='/jobs/:id' element={<JobPage />} loader={jobLoader} />
       {/* Any page that not found we just go there */}
       <Route path='*' element={<NotFoundPage />} />
     </Route>
