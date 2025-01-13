@@ -418,5 +418,104 @@ and we can put any type of resource we want in it.
 
 <!--  Proxying  -->
 
+- if we deploy this projects its no longer be at localhost:8000. SO we need to create a proxy
+- SO, if you ever reach react-app then you know that you do that within your package.json.
+- With vite it's a little different we do that within the config file.
+- So let's go to vite config and in the server object under the port we're going to add a proxy and basically we're going to say if it's if it is prefixed with SL API then we want to use this so we're going to set that to an object with a target and that Target is going to be HTTP local host Port 8000 or whatever port we use for JSON server we're going to add change origin and set that to true 
+
+- Now change localhost:8000 to /api and change in vite.config.js file for adding proxy 
+- We use the backend we want to send a request us simply do /api .
+- we have to change it in vite.config.js file 
+- We don't have to change it in in every single file that we make a request so that's basically the data fetching using useEffect()
+- There are other ways to fetch data 
+- There is something called react-suspense which is included with react and it allows us to do a render while fetching 
+<!--  Below we need to practice this way of fetching with the help of documentation other tutorials -->
+- What we're doing here is fetch on render because when it renders it has a side effect of fetching the data but suspense will allow us render while fetching and we basically provides a fallback UI such as spinner or a loading text whatever we pass that in as a props as an attribute. 
+- There is something also called react-query which is a third-party library there's one called SWR as well and those make data fetching a little easier than this so that might want to check out as well but this is like the base way of fetching from a client side components and with react-19 we have the new use hook we can also look into as well in fact that react 19 video 
+- React has so many different ways to do the same exact things and some people will say that's wrong wew know do it this way and another person will say that's wrong So we just need to kind of do what works for us.
+
+<!-- Single Page Job -->
+
+- The way that we get the data is going to be a little different we're going to use a data loader from react router which is actually pretty cool but we first have to create the actual page for the single jobs
+- We use "/jobs/:id" in jobPage route in app.jsx :id signifies that this is dynamic that's not a literal id. The letter id that we are passing in it's a symbol or a variable for whatever the ID is all right so let's save that and then if we go back here and reload 
+
+- We can use a useEffect so that when this page loads we get the job
+- What we do is use a data loader from react-router  this gonna work little bit different than we did with the jobListings 
+- Data loader we basically create a function in this file and then we can export it from this file and then use that function in other areas so we can use this in basically as our Global state for whatever this job is and pass it into other components 
+- Right under the JobPage function we're going to create a function I'm going to use an arrow but if we want to use a regular function we can we're going to call this job loader and we are going to set this to async and it's going to take in actually 
+take a look of JobPage.jsx for more understanding 
+
+<!-- useParams  -->
+
+- useParams :- use this to get id
+
+<!-- Data loader -->
 
 
+<!-- Single Job Output -->
+
+
+<!-- Add Job Page -->
+
+
+<!-- Working with Forms -->
+
+- in label instead of "for" we have to use htmlFor
+- There are many ways to work with forms 
+- other library like formic , there are lots of things we can do like refs 
+- The common way or the core way of doing it is adding a piece of state for every field in our form bcuz these change and then when we change it or we type int it or select we change the state of that item 
+- What we do it bring useState 
+- Import useState, and then we want to create a state item for each field now there's a different ways we can do this we could have just a single object in our state  and have all the fields in that object or we can do a separate piece of state for every field which is what we are going to do just to keep it simple 
+
+Like below we did in AddJobPage.jsx file
+
+```
+ const [ title, setTitle ] = useState('');
+  const [ type, setType ] = useState('');
+  const [ location, setLocation ] = useState('');
+  const [ description, setDescription ] = useState('');
+  const [ salary, setSalary ] = useState('');
+  const [ companyName, setCompanyName ] = useState('');
+  const [ companyDescription, setCompanyDescription ] = useState('');
+  const [ contactEmail, setContactEmail ] = useState('');
+  const [ contactPhone, setContactPhone ] = useState('');
+
+```
+- If we set then the value in the form will get updated 
+
+<!-- Form Submission -->
+
+- React 19 have something call actions where we can actually put an action and set that to function that's a brand new way of doing it.
+- In react 19 that isn't even released yet so we are going to stick to just adding an onSubmit 
+
+
+<!-- Delete job -->
+
+- We want to make actual request to the API after delete functionality 
+- What we use is for small application 
+- we can use context API which we know we would have it in a context file we can use Redux or some other state manager but thi is such a small application we don't need that.
+
+
+<!--- React Toastify Package -->
+
+- We want some proof that we deleted teh jobs using toastify react spinner and these are things that we use in our every project 
+- we can do toast.error as well for showing error
+
+<!-- Edit Job -->
+
+- using the same state what using AddJobPage.jsx code 
+- for this one more thing we want to add is id\
+- Make a PUT request 
+
+<!--  Build Static Assets For Production -->
+
+- Stop the development server 
+- Run `npm run build`
+- create a new folder called dist.
+- and this dist is our production build 
+- We can run that we vite in out package.json file there is file called preview 
+- That should run the development build
+- using ` npm run preview`
+- That running on 4173
+- top of the browser using this page is using production build of react
+- 
