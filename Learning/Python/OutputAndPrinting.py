@@ -1,0 +1,6 @@
+print('Hello World')
+print(4.5)
+print(5)
+print(2.4, "Hello")
+print('4.3', "Hello")
+print('Hello','end',98,False, end='\n')
