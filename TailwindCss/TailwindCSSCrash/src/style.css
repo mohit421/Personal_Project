@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url('../src/img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+}
+
+#cta {
+    background-image: url('../src/img/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 576px){
+    body {
+        background-position: 50px -50px;
+    }
+    #cta{
+        background-image: url('../src/img/bg-simplify-section-mobile.svg');
+    }
+}
+
+/* Hamburger menu */
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-top {
+    top: 0;
+}
+.hamburger-middle {
+    top: 7px;
+}
+.hamburger-bottom {
+    top: 14px;
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open .hamburger-middle {
+    opacity: 0;
+    /* display: none; */
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+

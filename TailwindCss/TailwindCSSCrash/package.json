@@ -1,0 +1,16 @@
+{
+  "name": "tailwindcsscrash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/style.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./src/style.css -o ./css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
