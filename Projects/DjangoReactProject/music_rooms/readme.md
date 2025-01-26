@@ -147,3 +147,25 @@ Vary: Accept
     - What i really doing is creating a kind of temporary storage object. That's called room_code and is being equal to whatever the value of code is variable code 
     - This will just be stored in this Just like this user session, just like this user has a session key  
     - This is kind of way to store your own info in the user's session 
+
+    <!-- Django & React Tutorial #9 - ComponentDidMount and Django Sessions -->
+
+    - Add RenderHomePage UI 
+    - When homePage load I need to check if the user is currently in a room and if they are in room that I need to redirect them.
+    - To do that, we need a way to check if they're in a room 
+    - We need an endpoint that we can call on the server that tells us, Hey, is this user in a room? if they are, what room are they in ? and from HomePage we redirect them to that room
+    - ComponentDidMount is pretty much means that the component just rendered for the first time on the screen, there's a bunch of different lifecycle methods. 
+    - There are lots of lifecycle methods - look while later
+    - This is just a way to hook into  the behavior of this react component. So if we wanna do something before it loads or before it actually renders on the screens then we would do that in a specific lifecycle method 
+    - If we do wanna say, make the component not update. When something specific happens, then you would hook into the , should component update method or hook or whatever we want to call it and just say we shouldn't update if this happens a bunch of different things we can do. they actually are very important to understand and we will use more of them 
+    - Create endpoint and url then 
+    - Handle the logic based on the response that we get in homepage
+
+
+
+<!-- Django & React Tutorial #10 - Django Sessions and Leaving Rooms -->
+- We have made a home page so that it will reredirected to correct room. When we rejoin the website later room we join the room we are currently in.
+
+
+<!-- Django & React Tutorial #11 - Updating Django Models -->
+

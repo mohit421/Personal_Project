@@ -1,24 +1,22 @@
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Grid from "@mui/material/Grid";
-import {Link, useNavigate } from "react-router-dom";
+import { Button, Grid, Typography, TextField, FormHelperText, FormControl, Radio, RadioGroup, FormControlLabel, Collapse, Alert } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function CreateRoomPage() {
-  const defaultVotes = 2;
-  const [guestCanPause, setGuestCanPause] = useState(true);
-  const [votesToSkip, setVotesToSkip] = useState(defaultVotes);
+const CreateRoomPage = ({
+  votesToSkip: initialVotesToSkip = 2,
+  guestCanPause: initialGuestCanPause = true,
+  update = false,
+  roomCode = null,
+  updateCallback = () => {},
+}) => {
+  const [guestCanPause, setGuestCanPause] = useState(initialGuestCanPause);
+  const [votesToSkip, setVotesToSkip] = useState(initialVotesToSkip);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
   const navigate = useNavigate();
 
   const handleVotesChange = (e) => {
-    const value = parseInt(e.target.value, 10);
-    setVotesToSkip(value > 0 ? value : 1); // Ensure value is at least 1
+    setVotesToSkip(e.target.value);
   };
 
   const handleGuestCanPauseChange = (e) => {
@@ -28,9 +26,7 @@ export default function CreateRoomPage() {
   const handleRoomButtonPressed = () => {
     const requestOptions = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         votes_to_skip: votesToSkip,
         guest_can_pause: guestCanPause,
@@ -38,56 +34,111 @@ export default function CreateRoomPage() {
     };
 
     fetch("/api/create-room", requestOptions)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to create room");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        navigate(`/room/${data.code}`); // Redirect to the new room page
-      })
-      .catch((error) => console.error("Error creating room:", error));
+      .then((response) => response.json())
+      .then((data) => navigate(`/room/${data.code}`));
   };
 
-  return (
-    <Grid
-      container
-      spacing={0}
-      alignItems="center"
-      justifyContent="center"
-      style={{ marginTop: "20px" }}
-    >
-      <Grid item xs={12} align="center" style={{ marginBottom: "10px" }}>
-        <Typography component="h4" variant="h4">
+  const handleUpdateButtonPressed = () => {
+    const requestOptions = {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        votes_to_skip: votesToSkip,
+        guest_can_pause: guestCanPause,
+        code: roomCode,
+      }),
+    };
+
+    fetch("/api/update-room", requestOptions).then((response) => {
+      if (response.ok) {
+        setSuccessMsg("Room updated successfully!");
+      } else {
+        setErrorMsg("Error updating room...");
+      }
+      // Allow the user to see the alert before triggering the callback or navigation
+      setTimeout(() => {
+        updateCallback();
+      }, 3000); // Adjust the time if necessary
+    });
+  };
+
+  const renderCreateButtons = () => (
+    <Grid container spacing={1}>
+      <Grid item xs={12} align="center">
+        <Button color="primary" variant="contained" onClick={handleRoomButtonPressed}>
           Create A Room
+        </Button>
+      </Grid>
+      <Grid item xs={12} align="center">
+        <Button color="secondary" variant="contained" to="/" component={Link}>
+          Back
+        </Button>
+      </Grid>
+    </Grid>
+  );
+
+  const renderUpdateButtons = () => (
+    <Grid item xs={12} align="center">
+      <Button color="primary" variant="contained" onClick={handleUpdateButtonPressed}>
+        Update Room
+      </Button>
+    </Grid>
+  );
+
+  const title = update ? "Update Room" : "Create a Room";
+
+  return (
+    <Grid container spacing={1}>
+      <Grid item xs={12} align="center">
+        <Collapse in={errorMsg !== "" || successMsg !== ""}>
+          {successMsg !== "" ? (
+            <Alert severity="success" onClose={() => setSuccessMsg("")}>
+              {successMsg}
+            </Alert>
+          ) : (
+            <Alert severity="error" onClose={() => setErrorMsg("")}>
+              {errorMsg}
+            </Alert>
+          )}
+        </Collapse>
+      </Grid>
+
+      <Grid item xs={12} align="center">
+        <Typography component="h4" variant="h4">
+          {title}
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={8} md={6} align="center" style={{ marginBottom: "10px" }}>
+      <Grid item xs={12} align="center">
         <FormControl component="fieldset">
           <FormHelperText>
             <div align="center">Guest Control of Playback State</div>
           </FormHelperText>
-          <RadioGroup row value={guestCanPause.toString()} onChange={handleGuestCanPauseChange}>
+          <RadioGroup
+            row
+            value={guestCanPause.toString()}
+            onChange={handleGuestCanPauseChange}
+          >
             <FormControlLabel
               value="true"
               control={<Radio color="primary" />}
               label="Play/Pause"
+              labelPlacement="bottom"
             />
             <FormControlLabel
               value="false"
               control={<Radio color="secondary" />}
               label="No Control"
+              labelPlacement="bottom"
             />
           </RadioGroup>
         </FormControl>
       </Grid>
 
-      <Grid item xs={12} sm={8} md={6} align="center" style={{ marginBottom: "10px" }}>
+      <Grid item xs={12} align="center">
         <FormControl>
           <TextField
-            required
+            required={true}
             type="number"
             onChange={handleVotesChange}
             value={votesToSkip}
@@ -102,22 +153,9 @@ export default function CreateRoomPage() {
         </FormControl>
       </Grid>
 
-      <Grid item xs={12} align="center" style={{ marginBottom: "10px" }}>
-        <Button color="secondary" variant="contained" onClick={handleRoomButtonPressed}>
-          Create A Room
-        </Button>
-      </Grid>
-
-      <Grid item xs={12} align="center">
-        <Button
-          variant="contained"
-          color="primary"
-          component={Link}
-          to="/" // Link back to home page
-        >
-          Back
-        </Button>
-      </Grid>
+      {update ? renderUpdateButtons() : renderCreateButtons()}
     </Grid>
   );
-}
+};
+
+export default CreateRoomPage;
