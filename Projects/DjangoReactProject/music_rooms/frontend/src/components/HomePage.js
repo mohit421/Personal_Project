@@ -27,6 +27,7 @@ const RenderHomePage = () => {
   );
 };
 
+
 const HomePage = () => {
   const [roomCode, setRoomCode] = useState(null);
 

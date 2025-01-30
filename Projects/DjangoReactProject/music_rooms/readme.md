@@ -169,3 +169,49 @@ Vary: Accept
 
 <!-- Django & React Tutorial #11 - Updating Django Models -->
 
+- Building out settings page or the settings tab on our room page.- We have right now, have room page with users details and leave room button so that they can leave the room
+- BUt ideally, what if the user is host of the room:-
+they should be able to modify the settings of all fields mentioned on the page
+
+- Make another serializer class name updateRoomSerializer like createRoomSerializer but in updateRoomSerializer add 'code' 
+
+- if we see in models.py our code field is unique.
+what that means that our serializer is actually going to not allow us to have valid data or say the data that we sent in is invalid. If the code that we pass in is not unique
+- We don't want to create a new room with that code. We're trying to update an existing room and what we need th code of that room to update it
+
+
+<!-- Django & React Tutorial #12 - React Default Props and Callbacks -->
+
+- Now, we are able to update the changes
+
+<!-- Django & React Tutorial #13 - Spotify API Tutorial (Authentication & Tokens) -->
+- Our Goal:- 
+    - We want to control a users music -Pause it, play it, rewind it. We want control over their music
+    - This require two thing from spotify. 
+        - we need to register an application with spotify and tell them hey this is our app and we are using users data we have to tell them we have application and using their api
+        - Then, we need to do every single user those who using our website who music is going to control. we need to give them to grant us  permission to use and access their spotify information. they need to give our application explicit permission.
+        So basic kind of slow of things here is gonna to be we authenticate our application with spotify 
+        then user authenticates our application.
+        So it say hey your application has access to my information it can control the music so on and so forth and then using that authentication or using tokens  
+        - We actually ble to send request ot spotify api that will in turn control the user's music 
+    📗 Authorization Guide: https://developer.spotify.com/documentation/web-api/concepts/authorization
+
+    📘 Web API: https://developer.spotify.com/documentation/web-api
+
+    📙 Web API Quick Start: https://developer.spotify.com/documentation/web-api/tutorials/getting-started
+
+    📔 Developer Dashboard: https://developer.spotify.com/
+
+- Create an app after creating an account on developer spotify
+- then after create an app called spotify and also create file inside it are : urls.py, credentials.py
+- inside credentials.py add client_id and client_secret id and redirect_uri
+- But typically, preferred way is to do through an environment variables 
+- Settings up the authentication flow
+    - So for that we need some endpoints or need some functions or something that can send requests to spotify to authenticate
+    our application as well as to authenticate a user
+    - So we fo to the view.py file inside of the spotify application that we just created 
+    - I am  going to start by creating the first view which is going to be the view that can authenticate our application 
+    or request access right so if we go back and look that diagram
+     ![alt text](image.png)
+    - 
+
