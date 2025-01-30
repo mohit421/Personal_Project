@@ -14,6 +14,14 @@ const Room = () => {
   const [spotifyAuthenticated, setSpotifyAuthenticated] = useState(false);
   const [song, setSong] = useState(null);
 
+  const componentDidMount = () =>{
+    interval = setInterval(getCurrentSong, 1000)
+  }
+
+  const componentWillUnmount = () => {
+    clearInterval(interval)
+  }
+
   useEffect(() => {
     const getRoomDetails = () => {
       fetch(`/api/get-room?code=${roomCode}`)
