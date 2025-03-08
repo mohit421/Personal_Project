@@ -35,9 +35,7 @@
 #     print("Sorry, this file doesn't exist!")
 
 # except Exception as e:
-#     print(e)
-
-# What else does it run the code that need to be executed if the try 
+#     print(e)# What else does it run the code that need to be executed if the try 
 #  clause doesn't raise an exception
 
 # try:

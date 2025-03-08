@@ -215,3 +215,23 @@ what that means that our serializer is actually going to not allow us to have va
      ![alt text](image.png)
     - 
 
+
+
+<!-- Django & React Tutorial #15 - Pausing & Playing Music With Spotify API -->
+
+- define play and pause inside views.py and also set endpoint for that in urls.py
+
+- We are wondering why we're not just directly sending the request from our frontend to spotify, rather than always doing this from backend because we're using a token we have our access token and a refresh token and those token we need to store on the backend cuz we can't have them expose them on the frontend. Otherwise someone can steal our user information, this is just kind of security things
+
+
+
+<!-- Django & React Tutorial #16 - Skipping Songs and Handling Votes -->
+
+- Everything is working when we have a premium web app
+- Setup a voting system
+    - 1sst case is the case in which we are the hosts and that's the case, we just go ahead and skip the song and if we are not the host , then what we need to do is actually register a vote . 
+
+- Create a model for that
+- What a vote really is, what issues we can run into here.
+- when a users votes, they're voting to skip the current song. SO this kind of can be a little bit difficult. cuz if say someone votes or two or three people votes but songs doesn't get cuz we didn't reached the no. of votes required.
+- everything a new songs comes on, we clear all of the current votes cuz those votes for the previous song not new one just came in that kind of issue that we run into here. and what that means is that we need to store, first of all who voted, what song they voted for what room they are in when they voted and ideally should stored what time they  voted at. 

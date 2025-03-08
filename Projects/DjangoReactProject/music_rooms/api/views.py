@@ -1,12 +1,11 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
-
-from rest_framework import generics , status
-from .models import Room
+from rest_framework import generics, status
 from .serializers import RoomSerializer, CreateRoomSerializer, UpdateRoomSerializer
+from .models import Room
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import JsonResponse
+
 # Endpoint is pretty much after the slash like /home /about
 
 
@@ -33,7 +32,7 @@ that's how how to handle Room model (Room class stuff)
 
 
 # Create your views here.
-class RoomView(generics.ListCreateAPIView):
+class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
 
@@ -50,30 +49,33 @@ class GetRoom(APIView):
         code = request.GET.get(self.lookup_url_kwarg)
         if code != None:
             room = Room.objects.filter(code=code)
-            if(len(room)>0):
-                data = RoomSerializer(room[0]).data 
+            if len(room) > 0:
+                data = RoomSerializer(room[0]).data
                 data['is_host'] = self.request.session.session_key == room[0].host
                 return Response(data, status=status.HTTP_200_OK)
-            return Response({'Room' :  'Invalid Room Code'}, status=status.HTTP_404_NOT_FOUND)
-        return Response({'Bad Request': ' Code parameter not found in request'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'Room Not Found': 'Invalid Room Code.'}, status=status.HTTP_404_NOT_FOUND)
+
+        return Response({'Bad Request': 'Code paramater not found in request'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class JoinRoom(APIView):
-    serializer_class = RoomSerializer
     lookup_url_kwarg = 'code'
-    def post(self,request, format=None):
+
+    def post(self, request, format=None):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
 
         code = request.data.get(self.lookup_url_kwarg)
         if code != None:
             room_result = Room.objects.filter(code=code)
-            if len(room_result)>0:
+            if len(room_result) > 0:
                 room = room_result[0]
                 self.request.session['room_code'] = code
-                return Response({'message': "Room Joined"}, status=status.HTTP_200_OK)
-            return Response({"bad Request": "Invalid Room Code"}, status=status.HTTP_400_BAD_REQUEST)
-        return Response({"bad Request": "Invalid post data, did not find a code key"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'message': 'Room Joined!'}, status=status.HTTP_200_OK)
+
+            return Response({'Bad Request': 'Invalid Room Code'}, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response({'Bad Request': 'Invalid post data, did not find a code key'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 '''

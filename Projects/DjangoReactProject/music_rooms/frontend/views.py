@@ -14,6 +14,6 @@ from django.shortcuts import render
 # Create your views here.
 from django.template.loader import get_template
 def index(request, *args, **kwargs):
-    print(get_template('frontend/index.html'))
+    # print(get_template('frontend/index.html'))
     return render(request, 'frontend/index.html') 
 

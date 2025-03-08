@@ -51,8 +51,10 @@ class Room(models.Model):
     guest_can_pause = models.BooleanField(null=False, default=False)
     votes_to_skip = models.IntegerField(null=False, default=1)
     created_at = models.DateTimeField(auto_now_add=True)
+    current_song = models.CharField(max_length=50, null=True, blank=True)
+    volume = models.IntegerField(default=50)  #store volume
 
-
+    
     # Now, our migrations is done. apply makemigrations and migrate 
     # We have create our model. We want to setup an API view. This is different from standard HTML view.
     # They can return all of the Room that are currently in our database.

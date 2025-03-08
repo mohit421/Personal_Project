@@ -23,11 +23,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&+ug0@2mqc1a-*+o718axvhy_=ho-!f)ai$!cx&#lt4jj&pnsy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import os
+from dotenv import load_dotenv
 
-ALLOWED_HOSTS = []
+load_dotenv()
 
+CLIENT_SECRET=os.getenv('CLIENT_SECRET')
+CLIENT_ID=os.getenv('CLIENT_ID')
+REDIRECT_URI=os.getenv('REDIRECT_URI')
+DEBUG = os.getenv('DEBUG') 
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+# print("CLIENT_ID:", os.getenv("CLIENT_ID"))
+# print("CLIENT_SECRET:", os.getenv("CLIENT_SECRET"))
 # Application definition
 
 INSTALLED_APPS = [
