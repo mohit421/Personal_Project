@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    height: 100vh;
+    background-color: greenyellow;
+    /* background-image: url("https://images.unsplash.com/photo-1742210595290-f021aba0d9f2?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    /* background-image: url("https://media.istockphoto.com/id/1268467641/photo/small-portion-salad.webp?a=1&b=1&s=612x612&w=0&k=20&c=ENWZlgToatCWg6i-UoJJL0WXkdt7ZYak-z2f7hihkz4="); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    /* background-attachment: fixed; */
+    background: url("https://media.istockphoto.com/id/1412860042/photo/peekaboo.jpg?s=612x612&w=0&k=20&c=r0zhEzoD6wc5n2l3_BWORh7Lerrsy7aflfqSj4X7adk=") no-repeat center / cover fixed;
+}

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+/* grabient.com */
+div{
+    background-image: radial-gradient(rgba(0, 0, 255, 0.161) , rgba(135, 207, 235, 0.236)
+    ),
+    url("https://media.istockphoto.com/id/1188449273/photo/garden-tree.jpg?s=612x612&w=is&k=20&c=hqC0rOI_7c6oabhwCTRfDfquZwCQPFdB9DzB8CdOqgA=");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* filter: blur(3px); */
+    /* filter: brightness(60%); */
+    /* filter: contrast(100%); */
+    /* filter: grayscale(70%); */
+    filter: saturate(100%);
+}

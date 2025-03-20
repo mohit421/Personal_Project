@@ -1,0 +1,12 @@
+
+div{
+    background-color: teal;
+    /* display: inline; */
+    display: none;
+}
+
+span{
+    background-color: pink;
+    /* display: block; */
+    display: none;
+}

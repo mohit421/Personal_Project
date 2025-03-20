@@ -1,0 +1,25 @@
+/* Colors, rgb: red, green and blue
+, hex:-hexadecimal color(#RRGGBB):- RR- for red, GG for green, and BB for blue,
+ hsl:- hue , saturation, lightness */
+
+h1{
+    color: purple;
+    background: teal;
+}
+
+h2{
+    /* color: rgb(255,99,255);
+     */
+     /* last one for transperancy */
+     color: rgba(255,0,0,0.5); 
+     background-color: black;
+}
+
+h3 {
+    /* color: #3cb371;
+     */
+     /* color: #ff00ff; */
+     color: hsl(142,47%,44%);
+     background: #ff00ff;
+}
+

@@ -1,0 +1,40 @@
+/* If we want to remove browsers margina nd padding then we have select everything */
+
+*{
+    /* margin-top: 0;
+    margin-left: 0; */
+    margin: 0;
+}
+
+/* div {
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+} */
+/* /shorthand */
+
+div {
+    /* border: 2px dotted red;
+     */
+     /* border-left: 8px solid crimson; */
+     /* border-right: 8px solid blueviolet; */
+     /* border-bottom: 2px solid crimson; */
+     border-top: 2px solid orange;
+     border-bottom: 2px solid teal;
+     border-left: 2px solid green;
+     border-right: 2px solid pink;
+     /* padding: 20px; */
+     /* padding-top: 20px; */
+     /* padding-left: 20px; */
+     /* text-align: right; */
+     /* padding-right: 20px;
+      /* padding: top bottom left and right*/
+       /*if we provide wo value thenfirst value is for top and bottom and 2nd value for left and right  */
+    padding: 10px 0;
+    /* margin: 10px; */
+    /* margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; */
+    /* margin: 20px 0; */
+}

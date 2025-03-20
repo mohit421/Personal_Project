@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+
+/* linear gradient */
+/* div{
+    background-image: linear-gradient(to bottom,
+    rgba(0, 0, 255, 0.291), 
+    rgba(0, 128, 0, 0.318),rgba(255, 0, 0, 0.312)
+    ),
+    url("https://media.istockphoto.com/id/1188449273/photo/garden-tree.jpg?s=612x612&w=is&k=20&c=hqC0rOI_7c6oabhwCTRfDfquZwCQPFdB9DzB8CdOqgA=");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+} */
+
+/* Radial Gradient */
+div{
+    background-image: radial-gradient(rgba(0, 0, 255, 0.346) , rgba(135, 207, 235, 0.236)
+    ),
+    url("https://media.istockphoto.com/id/1188449273/photo/garden-tree.jpg?s=612x612&w=is&k=20&c=hqC0rOI_7c6oabhwCTRfDfquZwCQPFdB9DzB8CdOqgA=");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}

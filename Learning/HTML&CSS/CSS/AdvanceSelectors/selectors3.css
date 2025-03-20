@@ -1,0 +1,34 @@
+/* if i want to select everything inside section then  */
+
+/* *{
+    border: 2px solid aqua;
+} */
+section * {
+    border:2px solid teal;
+}
+
+div.text {
+    color: teal;
+}
+
+div p{
+    color: yellow;
+}
+
+div h2{
+    color: red;
+}
+
+div>p{
+    color: magenta;
+}
+div + h3{
+    color: brown;
+}
+a[href="one"] {
+    color: orange;
+}
+
+img[alt="nature"]{
+    color: pink;
+}
