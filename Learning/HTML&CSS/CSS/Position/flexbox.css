@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: blueviolet;
+    height: 100vh;
+}
+.container{
+    border: 2px solid white;
+    width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    /* flexbox */
+    display: flex; /* by deafult flex direction is row*/
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* justify content worrk on main axis */
+    /* justify-content: flex-start; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+    /* align-item works on cross-axis */
+
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* align-content: stretch; */
+    /* flex-wrap: wrap;
+    align-content: space-between; */
+
+}
+
+.container .child{
+    width: 20px;
+    height: 20px;
+    background: crimson;
+    text-align: center;
+    margin: 5px;
+    width: 400px;
+
+}
+
+.special{
+    /* order: 1; */
+    /* align-self: flex-start; */
+    /* align-self: flex-end; */
+    /* align-self: center; */
+    /* flex-grow: 1; */
+    /* flex-basis: 10px; */
+    flex-shrink: 2;
+}
+.special-two{
+    /* order: 2; */
+    /* flex-grow: 2; */
+    /* flex-basis: 100px; */
+}

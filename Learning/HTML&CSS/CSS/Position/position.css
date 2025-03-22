@@ -1,0 +1,27 @@
+.container {
+    background: gray;
+    width: 90%;
+    height: 500px;
+}
+
+.d{
+    width: 100px;
+    height: 100px;
+}
+
+.one{
+    background: red;
+    position: relative;
+    left: 100px;
+}
+.two{
+    background: blue;
+    position: absolute;
+    left: 110px;    
+}
+
+.three{
+    background: teal;
+    position: sticky;
+    /* left: 100px; */
+}

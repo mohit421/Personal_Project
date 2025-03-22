@@ -1,0 +1,17 @@
+body{
+    background: #000;
+}
+/* x,y,blurness, color */
+div {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 255, 0.609);
+    box-shadow: 10px 5px 5px orange;
+}
+
+h1{
+    text-shadow: 2px 2px 2px red;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 50px;
+}
