@@ -1,0 +1,5 @@
+/* uis is a pseudo selector */
+
+:is(heading,h1,h2,h3){
+    color: red;
+}

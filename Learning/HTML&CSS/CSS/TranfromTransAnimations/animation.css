@@ -1,0 +1,37 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container > div{
+    width: 100px;
+    height: 100px;
+    background: darkblue;
+    /* Animation:- lets element gradually change from one style to another */
+    /* Anytuume we need to wrok on animations we need to work on a key frames so we are going to be using our 
+     animation stuff or animation property in here so first of all we
+     need to create a key frames for that*/
+    animation-name: mohitAnimation;
+    animation-duration: 4s;
+    /* animation-iteration-count: 3; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+ }
+
+ @keyframes mohitAnimation {
+    0%{
+        transform: scale(2);
+    }
+    25%{
+        transform: scale(0.2);
+        background: teal;
+        transform: skew(10deg);
+    }
+    50%{
+        background-color: blue;
+        transform: skew(40deg);
+        border-radius: 50%;
+    }
+ }

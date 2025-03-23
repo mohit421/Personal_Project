@@ -1,0 +1,26 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.container > a{
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 10px 20px;
+    color: brown;
+    /* Transition:- It allows us to change property 
+    value smoothly or given duration to us */
+    transition-property: all;
+    transition-duration:  2s;
+    /* transition-timing-function: linear; */
+    /* transition-timing-function: cubic-bezier(.17,.67,.83,.67); */
+    transition-timing-function: cubic-bezier(.69,2.41,.83,.67);
+ }
+
+.container >a:hover{
+    background-color: brown;
+    color: white;
+ }
+

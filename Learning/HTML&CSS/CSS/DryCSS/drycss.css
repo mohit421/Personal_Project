@@ -1,0 +1,39 @@
+/* Do not repeat yourself */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* bad way of writing css */
+
+section.one .btn {
+    background: transparent;
+    border: none;
+    margin: 10px;
+    color: #fff;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: rgb(6,6,6);
+}
+
+/* if we wan to change the color of download button to green */
+/* so we have to duplicate above one like below one */
+/* section.two .btn {
+    background: transparent;
+    border: none;
+    margin: 10px;
+    color: #fff;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: rgb(42, 158, 63);
+} */
+
+/* above code is not the better way to write code  */
+/* using multiple class concept */
+
+.btn-secondary{
+    background: greenyellow;
+}

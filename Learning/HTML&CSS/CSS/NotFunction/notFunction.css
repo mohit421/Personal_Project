@@ -1,0 +1,14 @@
+body{
+    background: #1c1a1a;
+    color: #fff;
+    padding: 2rem;
+}
+.section{
+    width: 32em;
+    margin: 0 auto;
+    background: rgb(72, 66, 66);
+}
+
+.section .article-title :not(.content){
+    color: steelblue;
+}

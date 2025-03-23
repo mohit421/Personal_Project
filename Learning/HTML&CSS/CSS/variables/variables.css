@@ -1,0 +1,15 @@
+:root{
+    --primary-color: teal;
+    --font-size:4rem;
+    --bg-color:red;
+    --p:20px;
+}
+
+h1{
+    color: var(--primary-color);
+    background: var(--bg-color);
+    padding: var(--p);
+}
+h2{
+    font-size: var(--font-size);
+}

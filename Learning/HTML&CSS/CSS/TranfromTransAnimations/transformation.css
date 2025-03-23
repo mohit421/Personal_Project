@@ -1,0 +1,27 @@
+/* Tranform property applies an 2-D and 3-D property to an element
+ this property allows us to rotate, move, scale */
+
+ .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container > div{
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    /* tranform property
+    for X asix -> +ve value is for right and -ve for left and 
+    for y-axis-> +ve for bottm and -ve for top */
+    /* transform: translateY(-50px); */
+    /* transform: translateX(50px); */
+    /* transform: translateX(-50px); */
+    /* translate(X-axis value, y-axis value */
+    /* transform: translate(100px,-50px); */
+    /* transform: rotate(600deg); */
+    /* transform: scale(0.5); */
+    /* transform: scale(0.5,1); */
+    transform: skew(-20deg);
+ }
