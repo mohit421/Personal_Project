@@ -1,0 +1,217 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* font-family: "Open Sans", sans-serif; */
+
+/* Resets */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(144,195,200);
+    margin: 1rem;
+}
+.wrapper-container{
+    background-color: #ebeae9;
+}
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Nav Start */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 5rem;
+}
+
+
+nav ul {
+    margin-left: 5rem;
+    list-style: none;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav .burger {
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+nav .burger span {
+    height: 4px;
+    border: 2px solid black;
+    margin: 4px;
+    background-color: #000;
+}
+
+/* Nav End */
+
+/* Header Start */
+
+header {
+    margin: 6rem;
+
+}
+
+.main-headings{
+    width: 50%;
+    font-size:3em;
+    font-weight: 800;
+}
+
+.primary-headings {
+    width: 50%;
+    margin-top: 3rem;
+    line-height: 30px;
+    font-size: 1.5rem;
+}
+
+.bg-gray {
+    background: rgb(85, 83, 83);
+    color: white;
+    padding: 2px 10px;
+    font-weight: bold;
+}
+
+/* heading end */
+
+/* Main start */
+
+main{
+    margin: 0 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+}
+
+main .img {
+    width: 40%;
+    margin: 10px;
+}
+
+/* main end */
+
+/* Sector Three Start */
+
+.section-three {
+    margin-left: 5rem;
+
+}
+
+.section-three .primary-headings{
+    padding-bottom: 10rem;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section-three .item h1{
+    font-size: 2rem;
+    color: rgb(97,97,97);
+    padding: 2px 10px;
+
+
+}
+.section-three img {
+    width: 400px;
+    height: 500px;
+    margin: 50px;
+}
+
+/* section-three end */
+
+/* Footer Start */
+
+footer {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    color: #fff;
+    background: rgb(144,195,200);
+}
+
+footer .logo-container h1{
+    font-size: 4rem;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+}
+
+footer .logo-container p{
+    max-width: 400px;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+
+footer .about-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .about-company .container {
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.about-company .container h1{
+    margin-bottom: 50px;
+
+}
+
+.about-company .container p {
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Project End */
+
+/* Responsiveness Start */
+
+@media screen and (max-width:740px){
+    header .main-headings {
+        width: 100%;
+    }
+    header .primary-headings{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .section-three .main-headings{
+        width: 100%;
+    }
+    .section-three .primary-headings{
+        width: 100%;font-size: 1.5rem;
+    }
+    .section-three img {
+        margin: 0; 
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+    }
+}
