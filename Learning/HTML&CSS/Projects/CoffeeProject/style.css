@@ -87,7 +87,7 @@ li a:hover{
     bottom: 4rem;
     font-size: 4rem;
     word-spacing: 10px;
-    margin: 40px;
+    margin: 20px;
 }
 
 .main-btn {
@@ -158,7 +158,9 @@ li a:hover{
     margin-top: 10rem;
 }
 
-
+.content-section p{
+    padding-bottom: 2rem;
+}
 
 .img-2 {
     width: 400px;
@@ -189,6 +191,7 @@ li a:hover{
     margin: 5rem;
 
 }
+
 
 .title-three {
     font-size: 4rem;
@@ -274,16 +277,27 @@ footer .container {
     max-width: 300px;
     text-align: center;
 }
-
+.container {
+    flex: 1; /* Makes each column take equal space */
+    min-width: 250px; /* Prevents containers from shrinking too much */
+    margin: 10px; /* Adds space between columns */
+}
 footer .heading-info {
     margin-bottom: 20px;
 
 }
-
+.hr-two{
+    
+    border: 2px solid var(--main-color);
+}
 footer p {
     line-height: 25px;
 }
-
+.container-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 span{
     color: var(--main-color);
 }
@@ -300,14 +314,79 @@ hr {
     font-family: sans-serif;
     margin-top: 20px;
     text-align: center;
+    width: 100%;
 }
 
 /* Project End */
 
 /* Medua Queries Responsiveness */
 
-@media only screen and (max-width:768px){
-    .main-headings{
-        
+@media only screen and  (max-width: 1024px) {
+    footer {
+        flex-direction: column;  
     }
+
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+    .card{
+        margin: 5rem;
+    }
+    .title-three{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .main-headings,
+    .primary-heading{
+        font-size: 2.5rem;
+    }
+    #our-story {
+        text-align: center; 
+    }
+
+    #our-story .title{
+        transform: translateX(50px);
+    }
+    #our-story .line{
+        display: none;
+    }
+
+    .content-section {
+        text-align: center;
+    }
+
+    #our-story .img-container .img {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .coffee-container .img-container {
+        margin-top: 5rem;
+        width: 50%;
+    }
+    .title{
+        margin: 0 auto;
+    }
+    .title-two {
+        margin: 0 auto;
+
+    }
+    .title-three {
+        text-align: center;
+        border: 2px solid red;
+    }
+    .card{
+        margin: 5rem auto;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
 }
