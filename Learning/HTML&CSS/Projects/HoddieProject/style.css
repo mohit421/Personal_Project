@@ -151,3 +151,199 @@ header {
 }
 
 /* Section-One End */
+
+/* Product Section Start */
+
+.products {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.products .products-heading{
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+.products .product-categories button {
+    margin-right: 20px;
+    margin-bottom: 2rem;
+}
+
+.products .product-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    max-width: 60rem;
+}
+
+.product-categories .product-items-container .item {
+    margin: 20px;
+}
+
+.products .product-items-container .item-layer {
+
+    background: #ebf10e;
+    padding: 40px;
+    margin-right: 40px;
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+}
+
+.products .product-items-container .item-layer img {
+    width: 150px;
+    height: 200px;
+}
+
+.products .product-items-container .item .item-name {
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+}
+
+.products .product-items-container .item .item-price {
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+}
+
+
+.products .product-items-container .item .view-product{
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--primary-font);
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+/* Prodcuts Section End */
+
+/* Customer Review Section Start */
+
+.customer-reviews {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.customer {
+    text-align: center;
+}
+
+.customer-heading {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.customer-reviews .customer-description {
+
+    font-size: 12px;
+    margin-top: 20px;
+    min-width: 200px;
+    text-align: center;
+    margin: 10px;
+    font-family: var(--primary-font);
+}
+
+.customer .customer-img .img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+
+}
+
+.customer .img-one {
+    background: url("https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3VzcnRvbWVyJTIwbWFufGVufDB8fDB8fHww");
+}
+.customer .img-two {
+    background: url("https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VzcnRvbWVyJTIwbWFufGVufDB8fDB8fHww");
+}
+.customer .img-three {
+    background: url("https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3VzcnRvbWVyJTIwd29tYW58ZW58MHx8MHx8fDA%3D");
+}
+
+/* Customer Reviews Section End */
+
+/* Footer Start */
+
+footer {
+    background: #1f1e1e;
+    margin-top: 10rem;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+    font-family: var(--primary-font);
+    height: 40vh;
+}
+
+
+footer .container {
+
+    margin-top: 7rem;
+
+}
+
+footer .container .footer-primary-heading {
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size:15px;
+}
+
+/* Footer End */
+
+
+/* Project End */
+
+/* Responsiveness */
+
+@media only screen and (max-width:900px){
+    header {
+        height: 120vh;
+        text-align: center;
+    }
+
+    .section-one {
+        height: 120vh;
+        text-align: center;
+    }
+
+    .header-img {
+        width: 250px;
+        height: 250px;
+
+    }
+
+    .main-headings {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .primary-headings {
+        width: 400px;
+    }
+
+    .customer .customer-img .img {
+        width: 150px;
+        height: 150px;
+    }
+} 
