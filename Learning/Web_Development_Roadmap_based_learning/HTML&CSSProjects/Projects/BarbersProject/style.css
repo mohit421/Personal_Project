@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* font-family: "Roboto Flex", sans-serif; */
+
+/* variables */
+:root {
+    --main-color: #37132d;
+    --primary-color: #312e2e;
+    --main-font: "Roboto Flex", sans-serif;
+    --primary-font: sans-serif;
+}
+
+
+/* Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* nav Start */
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: #636262; */
+
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+}
+
+
+ul li a {
+    text-decoration: none;
+    margin: 10px;
+    color: #000;
+    font-family: var(--primary-font);
+}
+/* Nav End */
+
+/* section one start */
+
+.content__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.header__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+
+}
+
+
+.header__heading {
+   font-family: var(--main-font);
+   font-size: 4rem;
+
+}
+
+
+.header_sub-headings{
+    width: 70%;
+    font-family: var(--primary-font);
+    color: rgb(82,82,82);
+    margin: 20px 0;
+}
+
+
+.main-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: var(--main-color);
+    color: #fff;
+    font-family: var(--primary-font);
+
+}
+
+
+.header__img-container {
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.header__img {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+}
+.img-one {
+    left: 10rem;
+}
+.img-two {
+    top: 10rem;
+}
+
+
+/* section one end */
+
+/* Experience Section Start */
+
+.experience {
+    height: 90vh;
+    margin-left: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.experience-img {
+    background: url("https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGJhcmJlcnN8ZW58MHx8MHx8fDA%3D");
+    background-size: cover;
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+}
+
+
+.gray-heading {
+    color: gray;
+    font-family: var(--main-font);
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+/* Experience Section End */
+
+/* Social Media Section Start  */
+
+.social-media{
+    margin: 5rem;
+}
+
+.sm-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+}
+
+.follow {
+    padding: 20px;
+    background: var(--main-color);
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    margin-right: 3rem;
+    text-align: center;
+}
+
+
+
+/* Social Media Section End  */
+
+/*  Hero Section Start  */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+
+.hero-img-container {
+    background: url("https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFyYmVyc3xlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+}
+
+.hero__sub-headings {
+    width: 400px;
+
+}
+
+.hero__content {
+    margin-left: 6rem;
+}
+/*  Hero Section End  */
+
+/* Section Services Start  */
+
+.services {
+    margin-top: 10rem;
+
+}
+
+.services__g-heading {
+    margin-left: 5rem;
+}
+
+.services-heading {
+    margin-left: 5rem;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px rgb(223,223,223);
+    margin: 20px;
+
+}
+
+.card-img{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position:  center;
+}
+
+.img-one {
+    background-image: url("https://images.unsplash.com/photo-1621607512022-6aecc4fed814?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFyYmVyc3xlbnwwfHwwfHx8MA%3D%3D");
+}
+.img-two {
+    background-image: url("https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFyYmVyc3xlbnwwfHwwfHx8MA%3D%3D");
+}
+.img-three {
+    background-image: url("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhcmJlcnN8ZW58MHx8MHx8fDA%3D");
+}
+
+.card-content {
+    transform: translateY(200px);
+    text-align: center;
+    margin: 10px;
+}
+
+.card-title {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: -20px;
+    color: #000;
+}
+
+.card-info {
+    font-family: var(--primary-font);
+    text-align: center;
+    color: rgb(109,109,109);
+    margin: 30px 40px;
+}
+/* Section Services End */
+
+/* Footer Section Start */
+.footer {
+    background-color: var(--main-color);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height: 50vh;
+    margin-top: 10rem;
+}
+
+.footer__card-title {
+    font-family: var(--main-font);
+
+}
+
+.footer__card-info{
+    font-family: var(--primary-font);
+    line-height: 2rem;
+}
+
+
+
+/* Footer Section End */
+
+
+/* Responsiveness */
+
+@media only screen and (max-width:600px) {
+    .nav{
+        flex-direction: column;
+    }
+    .header__content {
+        align-items: center;
+        text-align: center;
+        width: 70%;
+    }
+    .header__img-container{
+        display: none;
+    }
+    .experience {
+        height: 50vh;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .experience-heading {
+        font-size: 3rem;
+    }
+
+    .experience__sub-headings{
+        margin: 0 auto;
+    }
+
+    .btn-container {
+        margin-top: 30px;
+        margin-bottom: -3.5rem;
+    }
+    .hero__headings {
+        font-size: 3rem;
+    }
+    .follow {
+        display: none;
+    }
+    .sm-container {
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .list-items {
+        margin: 10px;
+    }
+    .hero_content {
+        margin: 0 auto;
+    }
+}
