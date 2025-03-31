@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@100..900&display=swap');
+
+
+body {
+    background: hsl(212, 45%, 89%);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    font-family:  "Outfit", sans-serif;
+}
+
+.card {
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px hsl(216, 15%, 48%);
+    padding: 4%;
+    top: 25%;
+    text-align: center;
+    width: 375px;
+}
+
+.qr-img {
+    border-radius: 15px;
+    height: 375px;
+    width: 375px;
+}
+
+.qr-header {
+    color: hsl(218, 44%, 22%);
+    font-weight: 700;
+}
+
+.qr-content {
+    color: hsl(216, 15%, 48%);
+    font-weight: 400;
+    padding: 15px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+} 
