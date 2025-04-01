@@ -22,8 +22,6 @@ A simple QR code component built using HTML and CSS, following the design guidel
 
 ## Links
 
-- **Solution URL:** [GitHub Pages]()
-
 ## My Process
 
 I have used simple HTML and CSS (flexbox) only to create this QR Code Component
