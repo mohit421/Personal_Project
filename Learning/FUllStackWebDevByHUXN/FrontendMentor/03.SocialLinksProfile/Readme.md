@@ -23,15 +23,15 @@ A simple QR code component built using HTML and CSS, following the design guidel
 
 ## Links
 
-- **Repo Link:** [mohit421](https://github.com/mohit421/Personal_Project/tree/main/Learning/FUllStackWebDevByHUXN/FrontendMentor/02.BlogPreviewCard)
-- **Live Link:** [BlogPreviewCard]()
+- **Repo Link:** [mohit421](https://github.com/mohit421/Personal_Project/tree/main/Learning/FUllStackWebDevByHUXN/FrontendMentor/03.SocialLinksProfile)
+- **Live Link:** [BlogPreviewCard](https://mohitsocialprofiellink.netlify.app/)
 
 ## My Process
 
 ## Built With
 
 - Semantic HTML5 markup
-- CSS Custom, Flexbox and Absolute property
+- CSS Custom, Flexbox property
 
 ## Continued Development
 
