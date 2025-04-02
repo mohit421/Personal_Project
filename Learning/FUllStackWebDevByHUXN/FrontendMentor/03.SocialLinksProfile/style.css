@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/* Resets */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%); 
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--grey-900);
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    padding: 20px;
+}
+/* main start */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card{
+    background-color: var(--grey-800);
+    width: 60%;
+    max-width: 375px;
+    padding: 26px ;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    box-shadow: 0 0 10px var(--grey-700);
+}
+
+img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.main-name {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.location {
+    color: var(--green);
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+.card-heading
+ {
+    margin-top: 15px;
+}
+
+.card-text{
+    margin-top: 20px;
+}
+.emp-status {
+    color: var(--white);
+    font-size: 9px;
+}
+
+.btn {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    width: 110%;
+    color: var(--white);
+    background-color: var(--grey-700);
+    
+}
+
+.github {
+    margin-top: 29px;
+}
+.instagram {
+    margin-bottom: 20px;
+}
+/* main end */
+
+/* footer Start */
+
+.footer {
+    background-color: var(--white);
+    width: 100%;
+    color: var(--grey-900);
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+/* footer end */
+
+/* responsiveness */
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 100%;  /* Increase width */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        max-width: 80%;  /* Make it even wider */
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
