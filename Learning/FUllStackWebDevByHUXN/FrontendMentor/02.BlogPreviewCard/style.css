@@ -76,7 +76,10 @@ body{
     text-align: left;
     margin-top: 10px;
 }
-
+.secondary-heading{
+    font-weight: 900;
+    font-size: 20px;
+}
 .avatar {
     display: flex;
     align-items: center;
