@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+/* resets */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+:root{
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+body{
+    background-color: var(--stone-100);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Young Serif", serif;
+    width: 100%;
+}
+
+/* container start */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 15px;
+    margin: 10rem 0;
+}
+
+.card {
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 15px;
+
+}
+
+.card-img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-heading {
+    margin: 15px 0;
+}
+
+.main-text {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+/* prep-time start */
+.prep-time {
+    background-color: var(--rose-50);
+    position: relative;
+    padding: 2px 0;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.prep-heading{
+    color: var(--rose-800);
+    position: relative;
+    left: 1rem;
+    padding: 6px 0;
+    margin-top: 10px;
+}
+.prep-list{
+    font-size: 12px;
+    position: relative;
+    left: 2rem;
+    margin-bottom: 15px;
+}
+
+.prep-list li {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 0;
+}
+.prep-list li span {
+    font-weight: normal;
+    
+}
+
+/* prep-time end */
+
+/* Ingredients and Instructions start */
+
+
+.card-headings{
+    color: var(--rose-800);
+    margin: 15px 0;
+}
+.card-texts {
+    font-size: 12px;
+    position: relative;
+    left: 1.5rem;
+    max-width: 30.8rem;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+}
+.card-texts li span {
+    font-weight: bold
+}
+
+
+
+/* Ingredients and Instructions end */
+
+/* Nutrition Start */
+.main-Nutri{
+    position: relative;
+    left: 1rem;
+}
+
+.nutri-text{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.main-Nutri .row {
+    font-size: 12px;
+    margin: 10px 0;
+}
+.main-Nutri .row .nutri-sp1{
+    position: relative;
+    left: 1.4rem;
+}
+.main-Nutri .row .nutri-sp2 {
+    color: var(--rose-800);
+    position: absolute;
+    right: 8rem;
+}
+/* Nutrition End */
+
+/* footer start */
+footer {
+    background-color: var(--white);
+    width: 100%;
+}
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+/* footer end */
+    /* container end */
+
+
+    /* Responsiveness */
+
+@media only screen and (max-width:768px) {
+    .container{
+        margin:30px
+    }
+}
