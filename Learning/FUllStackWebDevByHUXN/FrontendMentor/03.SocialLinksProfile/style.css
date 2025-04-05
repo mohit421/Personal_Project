@@ -99,6 +99,11 @@ img{
     
 }
 
+.btn:hover {
+    background-color: var(--green);
+    color: var(--grey-800);
+}
+
 .github {
     margin-top: 29px;
 }
@@ -129,7 +134,7 @@ img{
 @media (max-width: 768px) {
     .card {
         width: 100%;
-        max-width: 100%;  /* Increase width */
+        max-width: 60%;  /* Increase width */
         padding: 20px;
     }
 }
