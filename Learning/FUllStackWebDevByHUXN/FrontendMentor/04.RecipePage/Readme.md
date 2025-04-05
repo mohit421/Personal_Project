@@ -18,20 +18,20 @@ A simple QR code component built using HTML and CSS, following the design guidel
 
 ## Screenshot
 
-![Recipe Page Desktop View]() _(Add your screenshot here)_
-![Recipe Page Mobile View]() _(Add your screenshot here)_
+![Recipe Page Desktop View](ScreenshotDesktop.png) _(Add your screenshot here)_
+![Recipe Page Mobile View](ScreenshotMobie.png) _(Add your screenshot here)_
 
 ## Links
 
-- **Repo Link:** [mohit421]()
-- **Live Link:** [RecipePage]()
+- **Repo Link:** [mohit421](https://github.com/mohit421/Personal_Project/tree/main/Learning/FUllStackWebDevByHUXN/FrontendMentor/04.RecipePage)
+- **Live Link:** [RecipePage](https://recipepagebymohit.netlify.app/)
 
 ## My Process
 
 ## Built With
 
 - Semantic HTML5 markup
-- CSS Custom, Flexbox property
+- CSS Custom, Flexbox and relative and absolute positioning property
 
 ## Continued Development
 
