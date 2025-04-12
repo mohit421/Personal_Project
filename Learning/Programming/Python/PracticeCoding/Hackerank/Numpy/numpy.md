@@ -198,3 +198,70 @@ print numpy.eye(8, 7, k = 1)    # 8 X 7 Dimensional array with first upper diago
 print numpy.eye(8, 7, k = -2)   # 8 X 7 Dimensional array with second lower diagonal 1.
 
 ```
+
+# Array Arithmetics
+
+- Basic mathematical functions operate element-wise on arrays. They are available both as operator overloads and as functions in the NumPy module.
+
+```
+import numpy
+
+a = numpy.array([1,2,3,4], float)
+b = numpy.array([5,6,7,8], float)
+
+print a + b                     #[  6.   8.  10.  12.]
+print numpy.add(a, b)           #[  6.   8.  10.  12.]
+
+print a - b                     #[-4. -4. -4. -4.]
+print numpy.subtract(a, b)      #[-4. -4. -4. -4.]
+
+print a * b                     #[  5.  12.  21.  32.]
+print numpy.multiply(a, b)      #[  5.  12.  21.  32.]
+
+print a / b                     #[ 0.2         0.33333333  0.42857143  0.5       ]
+print numpy.divide(a, b)        #[ 0.2         0.33333333  0.42857143  0.5       ]
+
+print a % b                     #[ 1.  2.  3.  4.]
+print numpy.mod(a, b)           #[ 1.  2.  3.  4.]
+
+print a**b                      #[  1.00000000e+00   6.40000000e+01   2.18700000e+03   6.55360000e+04]
+print numpy.power(a, b)         #[  1.00000000e+00   6.40000000e+01   2.18700000e+03   6.55360000e+04]
+```
+
+# floor
+
+- The tool floor returns the floor of the input element-wise.
+- The floor of is the largest integer where .
+
+```
+import numpy
+
+my_array = numpy.array([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9])
+print numpy.floor(my_array)         #[ 1.  2.  3.  4.  5.  6.  7.  8.  9.]
+
+```
+
+# ceil
+
+- The tool ceil returns the ceiling of the input element-wise.
+- The ceiling of is the smallest integer where .
+
+```
+import numpy
+
+my_array = numpy.array([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9])
+print numpy.ceil(my_array)          #[  2.   3.   4.   5.   6.   7.   8.   9.  10.]
+
+```
+
+# rint
+
+- The rint tool rounds to the nearest integer of input element-wise.
+
+```
+import numpy
+
+my_array = numpy.array([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9])
+print numpy.rint(my_array)          #[  1.   2.   3.   4.   6.   7.   8.   9.
+
+```
