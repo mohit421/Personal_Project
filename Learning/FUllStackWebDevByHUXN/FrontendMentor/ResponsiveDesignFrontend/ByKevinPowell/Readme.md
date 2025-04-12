@@ -332,3 +332,152 @@ I'll be sharing my solution to the challenge tomorrow. If you're a little bit be
 Next week, we'll be jumping into flexbox and how we can use it with what we've already learned to make our layouts. We'll be looking at both the macro-scale with a page's layout, as well as the more micro-scale in putting together a common navbar component.
 
 ```
+
+# Why you shouldn't use em's for font-size
+
+- It compounds on each other reltive to its parent
+- Child's element always get mutiply it's parent's font-size every times as we go down in hierarchy for font-sizes
+
+# A Tale of width and max-width
+
+- [lookout this video for your reference](https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts/257597-day-6-review/740862-a-tale-of-width-and-max-width)
+- Look Day 6 folder to understand this point
+
+```Important Notes
+An interesting look at the two properties, and how they might not always act the way you think they will.
+
+As it says, the second one is the easier one to understand, just like we looked at, so I plan on sticking with that one
+```
+
+# Day 7
+
+# Challenge 3 Solution by Kevin Powell
+
+- Checkout folder Day 7
+- [Box-sizing border-box](https://www.youtube.com/watch?v=WlGQdgy-M6w&ab_channel=KevinPowell)
+- [BEM naming conventions](https://www.youtube.com/watch?v=SLjHSVwXYq4&ab_channel=KevinPowell)
+- We use , box-sizing border-box bcuz by defaults its's a content-box and whaterver we are adding in content-box like broder ord padding it addon to the width of it. and takign extra spaces
+
+### Use BEM naming conventions
+
+- it stands for Block Element modifier
+- Like text are part of card block so we can use \_\_ naming conventions for that
+
+---
+
+Absolutely! Here's a `README.md` file explaining the use of the **BEM naming convention** in a project, perfect for documentation or sharing with a team:
+
+---
+
+```markdown
+# 🧱 BEM Naming Convention for CSS
+
+This project uses the **BEM (Block-Element-Modifier)** naming convention for writing CSS. BEM is a methodology that helps you create reusable, scalable, and easy-to-maintain front-end code.
+
+---
+
+## 📖 What is BEM?
+
+BEM stands for:
+
+- **Block**: A standalone entity that is meaningful on its own (e.g. `button`, `form`, `nav`)
+- **Element**: A part of a block that has no standalone meaning (e.g. `button__icon`, `form__input`)
+- **Modifier**: A flag on a block or element that changes its appearance or behavior (e.g. `button--primary`, `form__input--error`)
+
+### 📌 Syntax
+```
+
+.block {}
+.block**element {}
+.block--modifier {}
+.block**element--modifier {}
+
+````
+
+---
+
+## ✅ Benefits of Using BEM
+
+- **Clear structure**: You immediately understand what a class is for.
+- **Avoids naming conflicts**: Each class is scoped to its component.
+- **Component-friendly**: Works great with React, Vue, or any modular architecture.
+- **Easy to scale**: BEM scales well for large teams and large codebases.
+- **Improved maintainability**: Predictable and readable CSS makes long-term maintenance easier.
+
+---
+
+## 🛠 Example
+
+```html
+<!-- HTML -->
+<div class="card card--featured">
+  <h2 class="card__title">BEM is awesome</h2>
+  <p class="card__description">A short intro to the BEM naming convention.</p>
+</div>
+````
+
+```css
+/* CSS */
+.card {
+  padding: 1rem;
+  background-color: white;
+}
+
+.card--featured {
+  border: 2px solid gold;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card__description {
+  color: #666;
+}
+```
+
+---
+
+## 🧪 When to Use What
+
+| Type     | Purpose                          | Example            |
+| -------- | -------------------------------- | ------------------ |
+| Block    | Base component                   | `.button`          |
+| Element  | Child of a block                 | `.button__icon`    |
+| Modifier | Style variation of block/element | `.button--primary` |
+
+---
+
+## 👎 Things to Avoid
+
+- Don’t nest elements unnecessarily: `block__element__element` is invalid.
+- Avoid generic class names like `.red` or `.big`.
+- Don’t use tag names in class names (e.g. `.div__title`).
+
+---
+
+## 📂 Recommended Folder Structure
+
+```bash
+styles/
+├── base/
+├── components/
+│   ├── _button.scss
+│   ├── _card.scss
+├── main.scss
+```
+
+Each component uses its own BEM-structured styles for modularity.
+
+---
+
+## 🧠 TL;DR
+
+Use BEM for:
+
+- Readable and maintainable CSS
+- Preventing class name collisions
+- Creating scalable and consistent design systems
+
+---
