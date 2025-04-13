@@ -265,3 +265,136 @@ my_array = numpy.array([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9])
 print numpy.rint(my_array)          #[  1.   2.   3.   4.   6.   7.   8.   9.
 
 ```
+
+# sum
+
+- The sum tool returns the sum of array elements over a given axis.
+
+```
+import numpy
+
+my_array = numpy.array([ [1, 2], [3, 4] ])
+
+print numpy.sum(my_array, axis = 0)         #Output : [4 6]
+print numpy.sum(my_array, axis = 1)         #Output : [3 7]
+print numpy.sum(my_array, axis = None)      #Output : 10
+print numpy.sum(my_array)                   #Output : 10
+By default, the axis value is None. Therefore, it performs a sum over all the dimensions of the input array.
+```
+
+# prod
+
+- The prod tool returns the product of array elements over a given axis.
+
+```
+import numpy
+
+my_array = numpy.array([ [1, 2], [3, 4] ])
+
+print numpy.prod(my_array, axis = 0)            #Output : [3 8]
+print numpy.prod(my_array, axis = 1)            #Output : [ 2 12]
+print numpy.prod(my_array, axis = None)         #Output : 24
+print numpy.prod(my_array)                      #Output : 24
+By default, the axis value is None. Therefore, it performs the product over all the dimensions of the input array.
+```
+
+# min
+
+- The tool min returns the minimum value along a given axis.
+
+```
+import numpy
+
+my_array = numpy.array([[2, 5],
+                        [3, 7],
+                        [1, 3],
+                        [4, 0]])
+
+print numpy.min(my_array, axis = 0)         #Output : [1 0]
+print numpy.min(my_array, axis = 1)         #Output : [2 3 1 0]
+print numpy.min(my_array, axis = None)      #Output : 0
+print numpy.min(my_array)                   #Output : 0
+
+```
+
+- By default, the axis value is None. Therefore, it finds the minimum over all the dimensions of the input array.
+
+# max
+
+- The tool max returns the maximum value along a given axis.
+
+```
+import numpy
+
+my_array = numpy.array([[2, 5],
+                        [3, 7],
+                        [1, 3],
+                        [4, 0]])
+
+print numpy.max(my_array, axis = 0)         #Output : [4 7]
+print numpy.max(my_array, axis = 1)         #Output : [5 7 3 4]
+print numpy.max(my_array, axis = None)      #Output : 7
+print numpy.max(my_array)                   #Output : 7
+
+```
+
+- By default, the axis value is None. Therefore, it finds the maximum over all the dimensions of the input array.
+
+# dot
+
+- The dot tool returns the dot product of two arrays.
+
+```
+import numpy
+
+A = numpy.array([ 1, 2 ])
+B = numpy.array([ 3, 4 ])
+
+print numpy.dot(A, B)       #Output : 11
+```
+
+# Matrix multiplication
+
+- result = np.matmul(A, B)
+
+# cross
+
+- The cross tool returns the cross product of two arrays.
+
+```
+import numpy
+
+A = numpy.array([ 1, 2 ])
+B = numpy.array([ 3, 4 ])
+
+print numpy.cross(A, B)     #Output : -2
+```
+
+# inner
+
+- The inner tool returns the inner product of two arrays.
+
+```
+import numpy
+
+A = numpy.array([0, 1])
+B = numpy.array([3, 4])
+
+print numpy.inner(A, B)     #Output : 4
+
+```
+
+# outer
+
+- The outer tool returns the outer product of two arrays.
+
+```
+import numpy
+
+A = numpy.array([0, 1])
+B = numpy.array([3, 4])
+
+print numpy.outer(A, B)     #Output : [[0 0]
+                            #          [3 4]]
+
+```
