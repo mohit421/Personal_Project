@@ -1,0 +1,213 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resets */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ## Colors */
+    /* ### Primary */
+
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+
+    /* ### Neutral */
+
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+}
+/* 
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+} */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* cantainer start */
+.container{
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 3rem;
+    
+}
+
+
+.card-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 100%; */
+    border-radius: 15px;
+    width: 80%;
+}
+
+/* card image start */
+.card__img img{
+    width: 100%;
+    border-radius: 15px 15px 0 0 ;
+    object-fit: cover; 
+}
+
+/* card image end */
+
+/* card text section start */
+.card__text {
+    padding: 2rem 3rem;
+}
+.card__text-first-para{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--grey);
+}
+
+
+.card__text-heading{
+    max-width: 90%;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+/* second para start */
+
+.card__text-second-para{
+    max-width: 90%;
+    margin-bottom: 1.8rem;
+    color: var(--grey);
+}   
+
+/* second para end */
+
+/* card pricing section  start*/
+.card__text-price{
+    margin-bottom: 1.8rem;
+}
+
+
+.perfume-price{
+    color: var(--green-500);
+}
+
+.perfume-price>span{
+    color: var(--grey);
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    position: relative;
+    left: 1rem;
+    bottom: 0.3rem;
+    letter-spacing: 0.09rem;
+}
+
+/* card pricing section end */
+
+/* card button section start */
+.card-btn{
+    background-color: var(--green-500);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.card-btn:hover,
+.card-btn:active {
+    background-color: var(--green-700);
+}
+
+/* card btn section end */
+
+
+
+/* card text section start */
+
+
+
+/* footer start */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap; /* Optional: allows wrapping on small screens */
+    margin-top: 20px;
+    color: hsl(228, 12%, 48%);
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+  
+/* footer end */
+/* container end */
+
+/* Responsiveness */
+@media screen and (min-width: 748px) {
+    .card-container {
+      flex-direction: row;
+      width: 700px;
+      height: 450px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  
+    .card__img {
+      flex: 1;
+      height: 100%;
+    }
+  
+    .card__img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 0 0 15px;
+    }
+  
+    .card__text {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .card__text-heading {
+      font-size: 1.9rem;
+    }
+  
+    .card-btn {
+      cursor: pointer;
+    }
+  }
+  

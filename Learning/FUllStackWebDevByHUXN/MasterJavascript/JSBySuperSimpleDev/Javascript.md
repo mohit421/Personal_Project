@@ -60,6 +60,8 @@ In this lession:
 
 # Variables
 
+---
+
 ```
 - What is a Variables ?
     - variable = a container
@@ -75,4 +77,48 @@ In this lession:
 
 - ; = end of an instruction ( Similar to a. in english)
 - we need semi-colon(;) to separate instructions in Javascript
+- we can't assing same variable name to let
+
+
+
 ```
+
+- Goto Projects for exercises :- [Supuer Simple Dev](supersimple.dev/projects/variables)
+
+### Variable re-assignment Shortcuts
+
+- +=2 --> variable = variable + 2
+- -=2 --> variable = variable - 2
+- _=2 --> variable = variable _ 2
+- /=2 --> variable = variable / 2
+- ++ --> variable = variable + 1
+- -- --> variable = variable - 1
+
+### Naming Conventions
+
+1. camelCase :- In this we combine the words together and capitalize every word except the first word (Standard naming convention in JS)
+   eg: camelCase :- cartQuantity
+2. PascalCase :- CartQuantity
+3. kebab-case : cart-quantity
+
+   - It doesn't work in JS , dash (-) is always a minus symbol
+     however we use kebab-case in HTML and CSS and also in our file_name
+
+4. snake_case : cart_quantity
+   - It really used in other language but it's not really used in JS
+
+### Ways to create a variables in JS
+
+- There are three ways to create variables in Javascript
+  1. let
+  2. var
+  3. const
+  - We can't changes it's value, using const we are sure that it's value remain constant
+  - Assignment to const variable is not valid
+  - Best practice = use cosnt by default (only use let when we need to change the variable)
+
+#### typeof
+
+- It tells us the what type a value is
+
+---
