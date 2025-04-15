@@ -398,3 +398,144 @@ print numpy.outer(A, B)     #Output : [[0 0]
                             #          [3 4]]
 
 ```
+
+# poly
+
+- The poly tool returns the coefficients of a polynomial with the given sequence of roots.
+
+```
+print numpy.poly([-1, 1, 1, 10])        #Output : [  1 -11   9  11 -10]
+```
+
+# roots
+
+- The roots tool returns the roots of a polynomial with the given coefficients.
+
+```
+print numpy.roots([1, 0, -1])           #Output : [-1.  1.]
+```
+
+# polyint
+
+- The polyint tool returns an antiderivative (indefinite integral) of a polynomial.
+
+```
+print numpy.polyint([1, 1, 1])          #Output : [ 0.33333333  0.5         1.          0.        ]
+```
+
+# polyder
+
+- The polyder tool returns the derivative of the specified order of a polynomial.
+
+```
+print numpy.polyder([1, 1, 1, 1])       #Output : [3 2 1]
+```
+
+# polyval
+
+- The polyval tool evaluates the polynomial at specific value.
+
+```
+print numpy.polyval([1, -2, 0, 2], 4)   #Output : 34
+```
+
+# polyfit
+
+- The polyfit tool fits a polynomial of a specified order to a set of data using a least-squares approach.
+
+```
+print numpy.polyfit([0,1,-1, 2, -2], [0,1,1, 4, 4], 2)
+#Output : [  1.00000000e+00   0.00000000e+00  -3.97205465e-16]
+```
+
+- The functions polyadd, polysub, polymul, and polydiv also handle proper addition, subtraction, multiplication, and division of polynomial coefficients, respectively.
+
+---
+
+- The NumPy module also comes with a number of built-in routines for linear algebra calculations. These can be found in the sub-module linalg.
+
+# linalg.det
+
+- The linalg.det tool computes the determinant of an array.
+
+```
+print numpy.linalg.det([[1 , 2], [2, 1]])       #Output : -3.0
+```
+
+# linalg.eig
+
+- The linalg.eig computes the eigenvalues and right eigenvectors of a square array.
+
+```
+vals, vecs = numpy.linalg.eig([[1 , 2], [2, 1]])
+print vals                                      #Output : [ 3. -1.]
+print vecs                                      #Output : [[ 0.70710678 -0.70710678]
+                                                #          [ 0.70710678  0.70710678]]
+```
+
+# linalg.inv
+
+- The linalg.inv tool computes the (multiplicative) inverse of a matrix.
+
+```
+print numpy.linalg.inv([[1 , 2], [2, 1]])       #Output : [[-0.33333333  0.66666667]
+                                                #          [ 0.66666667 -0.33333333]]
+```
+
+## More about linear algebra link: [link](https://numpy.org/doc/stable/reference/routines.linalg.html)
+
+---
+
+# mean
+
+- The mean tool computes the arithmetic mean along the specified axis.
+
+```
+import numpy
+
+my_array = numpy.array([ [1, 2], [3, 4] ])
+
+print numpy.mean(my_array, axis = 0)        #Output : [ 2.  3.]
+print numpy.mean(my_array, axis = 1)        #Output : [ 1.5  3.5]
+print numpy.mean(my_array, axis = None)     #Output : 2.5
+print numpy.mean(my_array)                  #Output : 2.5
+```
+
+- By default, the axis is None. Therefore, it computes the mean of the flattened array.
+
+# var
+
+- The var tool computes the arithmetic variance along the specified axis.
+
+```
+import numpy
+
+my_array = numpy.array([ [1, 2], [3, 4] ])
+
+print numpy.var(my_array, axis = 0)         #Output : [ 1.  1.]
+print numpy.var(my_array, axis = 1)         #Output : [ 0.25  0.25]
+print numpy.var(my_array, axis = None)      #Output : 1.25
+print numpy.var(my_array)                   #Output : 1.25
+```
+
+- By default, the axis is None. Therefore, it computes the variance of the flattened array.
+
+# std
+
+- The std tool computes the arithmetic standard deviation along the specified axis.
+
+```
+import numpy
+
+my_array = numpy.array([ [1, 2], [3, 4] ])
+
+print numpy.std(my_array, axis = 0)         #Output : [ 1.  1.]
+print numpy.std(my_array, axis = 1)         #Output : [ 0.5  0.5]
+print numpy.std(my_array, axis = None)      #Output : 1.11803398875
+print numpy.std(my_array)                   #Output : 1.11803398875
+
+```
+
+- By default, the axis is None. Therefore, it computes the standard deviation of the flattened array.
+
+---

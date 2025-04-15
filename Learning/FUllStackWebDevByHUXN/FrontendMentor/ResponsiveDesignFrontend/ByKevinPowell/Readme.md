@@ -481,3 +481,7 @@ Use BEM for:
 - Creating scalable and consistent design systems
 
 ---
+
+# Day 8 Flexbox Basics
+
+- Design Specs [link](https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts/260392-day-8-flexbox-basics/750307-flexbox-challenge-1-design-specs)
