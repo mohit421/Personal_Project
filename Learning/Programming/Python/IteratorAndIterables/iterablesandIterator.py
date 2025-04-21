@@ -80,12 +80,12 @@ then it shoudl remember wher it left off and print the next value
 - If we hit stop iteratiion exception it means that the iterator has been exhausted and has no more values so we can see it when we run though hem manually like this but when we run a normal for loop it knows how to handle the stop iteration exception and doesn't show it to us so in the background a  for loop is  basically doing something like this
 - It's first getting an iterator of our origianl object like we have done above and then it getting the next value until it hits a stop iteration  exception
 '''
-while True:
-    try:
-        item = next(i_nums)
-        print(item)
-    except StopIteration:
-        break
+# while True:
+#     try:
+#         item = next(i_nums)
+#         print(item)
+#     except StopIteration:
+#         break
 
 '''
 - If we run aboove then we basically got the same result from before when we ran our simple for loop now another characteristics of iterators that i should have mentioned is that they can only go forward so ther's no going backwards resetting it or making a copy of it 
@@ -100,23 +100,67 @@ while True:
 '''
 
 
-class MyRange:
+# class MyRange:
 
-    def __init__(self, start, end):
-        self.value = start 
-        self.end = end 
+#     def __init__(self, start, end):
+#         self.value = start 
+#         self.end = end 
 
-    def __iter__(self):
-        return self  
+#     def __iter__(self):
+#         return self  
 
-    def __next__(self):
-        if self.value >= self.end:
-            raise StopIteration
-        current = self.value 
-        self.value += 1 
-        return current 
+#     def __next__(self):
+#         if self.value >= self.end:
+#             raise StopIteration
+#         current = self.value 
+#         self.value += 1 
+#         return current 
     
 
-nums = MyRange(1,10)
+# nums = MyRange(1,10)
+# for num in nums:
+#     print(num)
+
+'''
+- Generator now they're extremely useful for creating easy-to-read iterators they look a lot like normal functions but instead of returning a result they instead yield a value when they yield a vaule it keeps that state until the generator is run again and yields the next value s
+- So generators are iterators as well but the dunder iter and dunder next methods are created automatically 
+- So we don't have o create them like we did in our class 
+- Let's write a generator function that doest he exact same thing that our range class does 
+'''
+
+def my_range(start,end):
+    current = start
+    while current < end:
+        yield current 
+        current +=1
+
+nums = my_range(1,10)
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+
+
+for num in nums:
+    print(num)
+
+
+'''
+- Generator function works just the class does that we created but I just think it's much more readable than the class so I like to use these generator functions whenever I can 
+'''
+
+'''
+- One cool thing about iterator is they can go on forever 
+so as long as there is a next value then  our iterator will keep getting each next value one at a time 
+- For examples:- If I have t remove our end variable here and then just put a true statement for our while loop so let me do that so I'll remove this end parameter and then instead of putting in a conditional here fdo like below 
+'''
+
+def my_range2(start):
+    current = start 
+    while True:
+        yield current
+        current += 1
+
+nums2 = my_range2(1)
 for num in nums:
     print(num)

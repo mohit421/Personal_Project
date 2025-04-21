@@ -1,7 +1,5 @@
 # Iterators and Iterables - What are they and how do they work?
 
-    - Iterable :- On a higher level it simply means that it is something that can be looped over so for example a list is iterable because we can loop over a list
-
 - There are lots of confusion related to these two terms, So I tried to make readme.md file to make you understand it better
 
 - For example:-
@@ -13,4 +11,5 @@
 
 # Started
 
-    -
+    - Iterables:- On a higher level it simply means that it is something that can be looped over so for example a list is iterable because we can loop over a list
+    - Go to iterables.py file to understand it better
