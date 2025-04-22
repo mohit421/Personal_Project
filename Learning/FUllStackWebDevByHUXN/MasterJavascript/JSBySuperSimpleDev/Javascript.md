@@ -122,3 +122,91 @@ In this lession:
 - It tells us the what type a value is
 
 ---
+
+# Booleans and if-statement
+
+- Booleans are another type of value
+
+  - There are only 2 booleans values;
+    true and false
+  - It represents whether something is true of false
+
+- Comparision Operators
+
+  - > greater than
+  - < less than
+  - > = greater than or equal to
+  - <= less than or equal to
+  - === equal to
+  - !== not equal to
+
+- IN JS there are two ways to check whether two value are equal :
+  - == : It tries to convert both values into the same type
+    ```
+    - console.log(5 == '5.00'); // true
+    bcz double equals convert both values into the same type , so convert both into number 5 and then compares them so that's why they are equal.
+    ```
+  - === : That's why in JS we always use triple equals (===) to check if two values are same so that we avoid the conversion behavior of double equals
+  ```
+  for ex: console.log(5 === '5.00') // false
+  - comparison operator have lower priority that math
+  ```
+
+```
+- In the order of Opeartions:
+1. (...)
+2. * /
+3. + -
+4. Comparison operators
+```
+
+# If- Statements
+
+- Lets us write multiple groups of code
+- and then decide which code to run
+
+- Create a rock paper and scissors projects
+
+```
+<!--
+
+- We can pick a move and then the computer will pick a random move and it will show us the result and we also have the score of how many times we won, lost and tied
+
+- Rules of Rock(✊) Paper('✋') Scissors(✌️)
+
+   - rock beats scissors
+   - paper beats rock
+   - scissor bears paper
+-->
+
+<!-- Steps:
+     when we click a button:
+     1. Computer randoomly seleccts a move
+     2. Compare the moves to get the result
+     3. Display the result in a popup
+     Math.randoom : generates a number greater than equal to zero and less then one. 0 <=number <1
+     -->
+Random number between :-
+if between 0 and 1/3 => rock
+if between 1/3 and 2/3 => paper
+if between 2/3 and 1 => scissors
+
+
+
+```
+
+# Logical Operator
+
+- And Operator && : It left and right side both true then it will return true otherwise false.
+- OR Operator || : it will return true if either of two are true otherwise false only if both are false.
+- Not ! : false to true and true to false.
+
+```
+
+- In the order of Opeartions:
+1. (...)
+2. * /
+3. + -
+4. Comparison operators
+5. Logical Operators
+```
