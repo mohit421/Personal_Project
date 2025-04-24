@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        // Truthy and falsy value
+        // if (5) {
+        //     console.log('truthy')
+        // }
+        if (0) {
+            console.log('truthy')
+        }
+
+        const cartQuantity = 5;
+        // if(cartQuantity>0){
+        // ```
+        // Instead of comparison we simply can use thuthy or falsy value  
+        // ```
+        if(cartQuantity){
+            console.log('cart has products');
+        }
+        console.log(!0);
+        // Below is not a valid math, that's it o/p not a number(NaN)
+        console.log('text'/5);
+        // like below we can't defined it with const for that we have to do differently.
+
+        let variable1;
+        console.log(variable1);
+
+        //06-BooleansAndIf-Statements.htm:34 Uncaught SyntaxError: Missing initializer in const declaration (at 
+        // const variable3 ;
+        const variable3 = undefined;
+        console.log(variable3);
+
+        // ternary opeartor
+        //    const result =  true ? 'truthy' : 'falsy';
+       const result =  0 ? 'truthy' : 'falsy';
+       console.log(result);
+
+        //    Gaurd Operator
+        false && console.log("hello");
+        // const message = false && 'hello'
+        const message = 4 && 'hello'
+        console.log(message);
+        // above one is hsortvut for belowone
+        // let message1;
+        // if (condition){
+        //     message = "hello";
+        // }
+
+        // Default Opeartor ||
+        const currency = "EUR" || "USD";
+        const currency1 = undefined || "USD";
+        console.log(currency1);
+        //Above is shortcut of below code
+        // let currency;
+        // if(!condition){
+        //     currency = 'USD';
+        // }
+    </script>
+</body>
+</html>

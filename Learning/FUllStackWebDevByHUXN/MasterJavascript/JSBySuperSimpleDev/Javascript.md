@@ -210,3 +210,20 @@ if between 2/3 and 1 => scissors
 4. Comparison operators
 5. Logical Operators
 ```
+
+# False Value in Javascript
+
+- false : 0 '' NaN undefined null
+- Any value not on above list is truthy value
+
+# Falsy value:-
+
+- NaN: Not a Number
+- undefined:
+- null:
+
+# Shortcuts for If-statements
+
+- Ternary Operator:- ?:
+- Guard Operator:- &&
+- Default Operator:- ||

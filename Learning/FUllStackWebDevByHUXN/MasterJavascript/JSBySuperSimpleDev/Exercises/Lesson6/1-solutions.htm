@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution1 - Exercise 6</title>
+</head>
+<body>
+    <script>
+        // solution 6a, 6b, 6c
+        let hour = 19
+        if(hour>=6 && hour <=12){
+            console.log('Good morning!')
+        }
+        else if(hour>=13 && hour<17){
+            console.log('Good Afternoon!')
+        }
+        else {
+            console.log('Good Night!')
+        }
+        let name = 'Mohit';
+        if(hour>=6 && hour <=12){
+            console.log(`Good morning ${name}!`)
+        }
+        else if(hour>=13 && hour<17){
+            console.log(`Good Afternoon ${name}!`)
+        }
+        else {
+            console.log(`Good Night ${name}!`)
+        }
+        // Solution 6d
+        // let age = 64;
+        // if(age<=6 || age>=65){
+        //     console.log('Discount');
+        // }
+        // else{
+        //     console.log('No Discount');
+        // }
+        // Solution 6e
+        const isHoliday = true;
+        let age = 63;
+        if((age<=6 || age>=65) && isHoliday){
+            console.log('Discount');
+        }
+        else{
+            console.log('No Discount');
+        }
+    </script>
+</body>
+</html>
