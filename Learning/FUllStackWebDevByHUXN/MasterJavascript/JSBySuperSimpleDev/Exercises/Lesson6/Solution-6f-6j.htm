@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 6f-6j</title>
+</head>
+<body>
+    <script>
+        coin = Math.random();
+        let result;
+        let guess = 'heads';
+        if(coin <0.5){
+            result = 'heads';
+            // console.log('heads')
+        }
+        else{
+            result = 'tails';
+            // console.log('tails')
+        }
+        // solution 6i
+        // if(guess === result){
+        //         console.log('You Win!');
+        // }
+        // else{
+        //     console.log('You lose!');
+        // }
+        // Solution 6j
+        guess===result?console.log('You Win!'):console.log('You Lose!');
+    </script>
+</body>
+</html>
