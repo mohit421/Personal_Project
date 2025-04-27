@@ -227,3 +227,44 @@ if between 2/3 and 1 => scissors
 - Ternary Operator:- ?:
 - Guard Operator:- &&
 - Default Operator:- ||
+
+# Functions
+
+- Rules for Function names:
+  1. can't use special words ex: function
+  2. Can't start with a number
+  3. Can't use special characters except: $ \_
+  - Best practice is to use camelCase
+- Let's us get a value out from the functions. it will ends the function immediately after return statement.
+- Following the code line-by-line = Tracing the code.
+- Check out rock-papare-scissor.html code:-
+  Compare the 2 solutions:
+
+1. Global Variable:-
+
+```
+<script>
+  let computerMove = '';
+  function pickComputerMove(){
+```
+
+2. Return:- It is preferred over global Variable,
+
+- Best Practice: Keep variables inside a scope (if we can)
+
+```
+return computerMove;
+  }
+  </script>
+```
+
+- Return = gets a value out of a function
+- Parameter = puts a value into a function
+- Parameter names follow the same rules as variables names
+
+### Summary of Functions
+
+1. Functions = let us reuse code
+2. Return = get a value out of a function
+3. Parameters = Put values into a function
+4. Improved the code for rock, paper,scissors game
