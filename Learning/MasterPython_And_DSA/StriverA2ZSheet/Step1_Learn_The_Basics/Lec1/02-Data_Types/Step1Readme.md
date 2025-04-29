@@ -79,7 +79,7 @@ output:-
 ```
 
 - Differences Between Primitive and Non-Primitive Data Types in Python
-  ![alt text](image.png)
+  ![D/B Primitive and Non-Primitive Data Types](/Learning/MasterPython_And_DSA/StriverA2ZSheet/Step1_Learn_The_Basics/image.png)
 
 # When to Use Primitive Data Types in Python ?
 

@@ -14,4 +14,5 @@ result = [d.get(key, "None") for key in query]
 for val in result:
     print(val)
 
-# 
+# Solution 3
+list(map(lambda k: print(d.get(k, "None")), query))

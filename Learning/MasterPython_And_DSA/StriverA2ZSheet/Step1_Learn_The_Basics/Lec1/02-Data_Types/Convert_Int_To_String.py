@@ -16,7 +16,7 @@ print(s)
 
 '''
 
-# 3. Using format() Function
+# 3. Using format() Function : format() function inserts values into {} placeholders in a string. This is similar to f-strings but works with older versions of Python (before 3.6).
 
 '''
 n = 42
@@ -32,6 +32,16 @@ print(s)
 n = 42
 
 s = "%s" % n
+print(s)
+
+'''
+
+# Using repr() for Debugging:- repr() function is usually used for debugging, as it gives a detailed string version of an object. While it also converts integers to strings, it’s not the most common method for simple integer-to-string conversion.
+
+'''
+n = 42
+
+s = repr(n)
 print(s)
 
 '''
