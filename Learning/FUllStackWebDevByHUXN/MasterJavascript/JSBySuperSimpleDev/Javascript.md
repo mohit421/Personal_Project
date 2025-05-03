@@ -268,3 +268,79 @@ return computerMove;
 2. Return = get a value out of a function
 3. Parameters = Put values into a function
 4. Improved the code for rock, paper,scissors game
+
+# Objects
+
+- An object groups multiple values together
+- Syntax Rule:-
+
+  - we can start with open curly braces and end with close curly braces
+  - we can put multiple value inside it and each values the code on the left is called property this is how we can access the value inside the object
+  - property and values is seperated by colon and this is called property value pair
+  - We can have many property value pairs in an objects and we seperated them with the commas
+  - To access a value inside the object we tuype the object's name and then Dot the property we want to access that will give us the value associated with the property
+
+- Objects
+
+  - let us group multiple values together
+  - let us use multiple value together
+
+- We can access property values using brackert Notation as well.
+- Bracker Notation:-
+
+  - Lets us use properties that don't work with dot notation
+  - between the bracket we don't just have to use a string we can use a variable a calculation or anything that results a value so we might be wondering
+    Which one should we use?
+    - use dot ntation bydefault bcuz its sorter and easier to read
+    - for properties that don't work with dot , use bracker notation
+
+- Inside an object , we can save any type of value includes numbers, strings, booleans as well as other objects
+- Objects themselves are also values
+
+- function inside object = Method liek console is method provided in JS and log is a function saved inside an objectS
+
+  - Math.random():- Math- object and random:- function use with math object
+
+- Buil-in Objects:-
+
+  - math object are also known as builtin objects cuz they are built-in to the language, they provided by the language
+
+  - Two more buil-in objects
+    - JSON
+    - localStorage
+  - We will use these objects to improve our rock paper scissors project
+
+- JSON built-in Object
+  - Helps us work with JSON
+  - JSON stands for JavaScript Object Notation
+  - The easiest way to understand JSON is it's basicallya syntax
+  - Similar syntax to JavaScript Object
+  - It has less features
+
+-![Javascript Object vs JSON code](image.png)
+
+- JSON vs Javascript Object:-
+
+  - All properties and strings must use double quotes in JSON. JSON doesn't support single quotes
+  - JSON doesn't support functions
+  - JSON is basically a syntax that's similar to a Javascript object syntax but with less features
+
+- Why would we use JSON syntax instead of Javascript Object
+
+  - A Javascript object only makes sense in Javascript
+  - On the other hand, JSON syntax understood by almost every programming language
+  - JSON syntax is more Universal for this reason we use JSON when we send data between two computers that might use different programming languages.
+  - We also use JSON when we store data
+
+- Built-in JSON object
+
+  - Convert Javascript Object to JSON :- JSON.stringify()
+  - Stringify is a method of the JSON object. so it's a function that saved inside JSON object. we call this function using parenthesis
+  - How to convert in other way from JSON to Javascript Object
+    - JSON.parse():- It helps use convert
+      - Javscript object <-> JSON
+
+- Build-in Object Local Storage
+  - Save values more permanently
+  - SO far we are storing our values into variables and variable are temporary and they only exist on the current page, all the variables are deleted if we refresh/close the page
+  - local storage doesn't get deleted when we refresh the page

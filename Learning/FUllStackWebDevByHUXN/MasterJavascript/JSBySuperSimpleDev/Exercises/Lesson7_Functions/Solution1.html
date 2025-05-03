@@ -17,6 +17,68 @@
         greet('Umang');
         greet('Rishabh');
         greet();
+
+        function convertToFahrenheit(celsius){
+            f = (celsius*9/5) + 32
+            return f
+        }
+        console.log(convertToFahrenheit(25))
+
+        function convertToCelsius(fah){
+            c = (fah-32)*5/9
+            return c 
+
+        }
+        console.log(convertToCelsius(86))
+
+        function convertTemperature(degrees, unit){
+            if (unit==='C'){
+                return convertToCelsius(degrees)
+            }
+            else if(unit==='F'){
+                return convertToFahrenheit(degrees)
+            }
+        }
+        console.log(convertTemperature(25,'C'))
+        console.log(convertTemperature(86,'F'))
+
+        function convertLength(length, from , to){
+            // const miles = 1.6
+            let unit
+            if (from === 'miles' && to === 'km'){
+                unit = length*1.6
+                return `${unit}km`;
+            }
+            else if (from==='km' && to==='miles'){
+                unit = length/1.6;
+                return `${unit}miles`;
+            }
+            else if (from==='km' && to==='km'){
+                return `${length}km`;
+            }
+            else if (from==='miles' && to==='miles') {
+                return `${length}miles`;
+            }
+            else if(from==='miles' && to==='ft'){
+                unit = length*5280
+                return `${unit}ft`;
+            }
+            else if(from==='km' && to==='ft'){
+                unit = length*3281
+                return `${unit}ft`;
+            }
+            else {
+                return `Invalid unit: ${to}`;
+            }
+        }
+        console.log(convertLength(50,'miles','km'));
+        console.log(convertLength(50,'km ','miles'));
+        console.log(convertLength(50,'km','km'));
+        console.log(convertLength(5,'miles','km'));
+        console.log(convertLength(5,'miles','ft'));
+        console.log(convertLength(5,'km','ft'));
+        console.log(convertLength(5,'lbs','lbs'));
+
     </script>
 </body>
 </html>
