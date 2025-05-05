@@ -301,14 +301,14 @@ return computerMove;
 
   - Math.random():- Math- object and random:- function use with math object
 
-- Buil-in Objects:-
+## Buil-in Objects:-
 
-  - math object are also known as builtin objects cuz they are built-in to the language, they provided by the language
+- math object are also known as builtin objects cuz they are built-in to the language, they provided by the language
 
-  - Two more buil-in objects
-    - JSON
-    - localStorage
-  - We will use these objects to improve our rock paper scissors project
+- Two more buil-in objects
+  - JSON
+  - localStorage
+- We will use these objects to improve our rock paper scissors project
 
 - JSON built-in Object
   - Helps us work with JSON
@@ -340,7 +340,52 @@ return computerMove;
     - JSON.parse():- It helps use convert
       - Javscript object <-> JSON
 
-- Build-in Object Local Storage
-  - Save values more permanently
-  - SO far we are storing our values into variables and variable are temporary and they only exist on the current page, all the variables are deleted if we refresh/close the page
-  - local storage doesn't get deleted when we refresh the page
+### Built-in Object Local Storage
+
+- Save values more permanently
+- SO far we are storing our values into variables and variable are temporary and they only exist on the current page, all the variables are deleted if we refresh/close the page
+- local storage doesn't get deleted when we refresh the page
+
+- Null vs undefined:-
+
+  - null: intentionally want something to be empty
+  - In most cases null and undefined works the same way.
+
+### Auto Boxing:-
+
+- Javascript has a special feature called Auto-boxing.
+  JS automatically wraps the string in a special object first and this object has the property length and the method toUpperCase , so this is done automatically wrapped aroung the string and this features is called Auto boxing
+- check out 06-MoreDetailedObjects.html code
+- Auto also works with other types of values like numbers and booleans
+- It only doesn't work with null and undefined
+
+### Objects are references:-
+
+    - when we create an object the actual value is created somewhere in the computer's memory and this variable actually just gets a reference that points to that location in the computer's memory
+    - this is like a shortcut on our computer , a shortcut points to where the actual file or folder is so there's no way to actually see this reference and objects is somewhere else in the computer's memory
+    - The reason it works this way is to make the language more efficient
+    - So if we had a really big object it's not good to copy the entire object over and over again instead JavaScript just copies the reference which is much fasteer this is called copy by Reference.
+
+##### Behaviour of References:-
+
+    - Make sure before changing the object1 as it's reference so object2 property also got changed
+    - We can't compare objects directly bcuz they contains a reference and that compare the references, not the values inside
+
+##### Shortcuts for Objects
+
+    -  //const message = object4.message;
+        // above line is same as below one
+        // Destructuring shortcut took the property out of the object and saved it in this message variable
+        // Use destructuring shortcut for multiple properties
+        const { message, price } = object4;
+
+        console.log(message);
+        console.log(price);
+
+## Summary of Objects:-
+
+    - Objects = group related values together
+    - Added a score to Rock Paper Scissors
+    - Built-in objects (JSON , localStorage)
+    - More details (null, auto-boxing, references)
+    - Shortcuts( destructuring, shorthand property. shorthand method)

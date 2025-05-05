@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Exercise Lesson 8</title>
+</head>
+<body>
+    <script>    
+        const product = {
+            name:'Basketball',
+            price: 2095
+        }
+        console.log(product.name);
+        console.log(product.price);
+
+        product.price += 500;
+        console.log(product.price);
+        product['delivery-time'] = '3 days';
+        console.log(product);
+
+        const product2 = {
+            name:'Badminton',
+            price: 2000
+        }
+
+        function comparePrice(product1,product2){
+            if(product1.price < product2.price){
+                console.log(product1.price)
+            }
+            else{
+                console.log(product2.price)
+            }
+        }
+
+        function isSameProduct(product1,product2){
+            if(product1.name === product2.name){
+                console.log(true);
+            }
+            else{
+                console.log(false)
+            }
+        }
+        comparePrice(product,product2);
+        isSameProduct(product,product2);
+
+        const aivar = 'Good Morning'
+        console.log(aivar.toLowerCase())
+    </script>
+</body>
+</html>
