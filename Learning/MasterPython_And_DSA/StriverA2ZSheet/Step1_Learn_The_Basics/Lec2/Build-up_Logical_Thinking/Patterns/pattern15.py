@@ -1,20 +1,17 @@
 '''
-A
-AB
-ABC
-ABCD
 ABCDE
+ABCD
+ABC
+AB
+A
 '''
 
 
 def print1(n):
-    char = 'A'
-    for i in range(1,n+1):
-        for j in range(i):
-            print(chr(65+j),end='')
-            # char= str(int(char) + 1)
+    for i in range(n):
+        for j in range(n - i):
+            print(chr(65 + j), end='')
         print()
-
 if __name__ == "__main__":
     t = int(input())
     for i in range(t):
