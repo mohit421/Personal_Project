@@ -1,5 +1,9 @@
 '''
-
+    A    
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
 '''
 
 

@@ -1,5 +1,11 @@
 '''
-   
+6
+A
+BB
+CCC
+DDDD
+EEEEE
+FFFFFF
 
 '''
 
