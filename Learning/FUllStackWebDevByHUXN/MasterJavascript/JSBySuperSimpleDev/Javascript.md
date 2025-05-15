@@ -389,3 +389,85 @@ return computerMove;
     - Built-in objects (JSON , localStorage)
     - More details (null, auto-boxing, references)
     - Shortcuts( destructuring, shorthand property. shorthand method)
+
+# DOM (Document Object Model)
+
+- DOM = another built-in object
+- document-object
+- Syntax rule for the DOM
+
+  - It is just this built in document object and this object works the same way as any other object It contains properties like body and title that we can access using the dot notation - the special thing about the document object is that it is linked to the web page that means if we change certain properties in this object it will also change the web page
+  - In addition to properties the document object also has methods we can use.
+
+- The DOM combines JavaScript and HTML together, and this gives JavaScript control of the web page
+
+#### Properties and Methods
+
+1. document.title
+2. document.body
+
+- Now we have an HTML element inside our JavaScript what can we do with it a really important thing to know is that when an HTML element is inside a Javascript like this
+- The HTML element is converted into a Javascript object, SO just liek any other object document.body has properties and methods we can use.
+
+  - innerHTML : It controls all the HTML inside the body,
+    it we change the innerHTMl property it will change the HTML inside the body element
+  - we can also replace this innerHTML code we new html code not just the text
+
+  ##### Method
+
+  - method = function saved inside an object
+
+  1. document.querySelector()
+
+  - Lets us get any element from the page and put it inside our JavaScript
+  - for example:
+    - If we put button then it will give the first button element from the html code
+    - If we body it will give the first body element from the code.
+    - Every HTML element has a property .innerHTML which let us control the HTML inside the element
+    - Anything we use in CSS can also use in this string (.js-button)
+      console.log(document.querySelector('.js-button')
+      .innerHTML)
+      again HTML elements are JavaScript Objects, so seond element is also just an object and remember objects are values and we can save them inside a variable
+
+- DOM combines JS and HTML together. It gives JS full control of the webpage
+
+- Do some practical project go to :-
+  [Check this](https://supersimple.dev/projects/dom/)
+
+- Whenever we got a value from a string the value will be a string
+- clicks, keydowns => events
+- onclick, onkeydown => event listeners
+
+### Event Listeners
+
+    - onclick = click
+    - onkeydown = key press
+    - onscroll = scrolling
+    - onmouseenter = hovering over
+    - onmouseleave = stop hovering over
+    ... and many more
+
+- If a string only contains a number and we - \* / => it will be converted into a number
+- Always do math with numbers, don't do math with string
+
+- Document object represent the web page
+
+### Window Objects
+
+    - Window object represent the browser
+    - It represents the browser everything inside the browser is inside the window object
+    So let's think what's inside the browser well web page is inside the browser so the document object if we type window.document object it will give us the same document object that we've been using
+    - console is also part of the browser so
+    console.log() => window.console.log()
+
+    - We don't have to type "window"
+    JavaScript will automatically add it.
+
+##### Summary
+
+    - DOM, which allows JavaScript to fully constrol the web page
+    - we learnt how to use document.querySelector(), to get ekement from the web page and put them inside our JavaScript
+    we learned how to use innerHTML to modify the HTML inside an element.
+    - We worked on three projects using the DOM
+    - We learnt how to make elements interactive with the keyboard using onkeydown="..."
+    - More details about strings and window objects
