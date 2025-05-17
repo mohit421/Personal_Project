@@ -47,3 +47,14 @@ class Solution:
         return len(list(filter(lambda d: d != 0 and n % d==0, [int(x) for x in str(n)])))
 
 # Solution 5 Using Recusion
+
+class Solution:
+    def evenlyDivides(self, n):
+        # code here
+        def helper(num):
+            if num==0:
+                return 0
+            d = num%10
+            return ((d != 0 and n%d == 0 ) + helper(num//10))
+        return helper(n)
+    

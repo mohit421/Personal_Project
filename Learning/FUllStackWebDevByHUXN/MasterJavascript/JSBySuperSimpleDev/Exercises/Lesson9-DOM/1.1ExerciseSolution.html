@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9 Exercise Solutioins</title>
+</head>
+<body>
+    <!-- 9a -->
+    <button>9a</button>
+    <!-- 9b -->
+    <button class="js-9b">9b</button>
+    <!-- 9c -->
+    <button class="js-coin" onclick="
+        document.querySelector('.js-chose')
+            .innerHTML = 'You chose: heads';
+    ">heads</button>
+    <button class="=js-coin" onclick="
+        document.querySelector('.js-chose')
+            .innerHTML = 'You chose: tails'
+    ">tails</button>
+    <p class="js-chose"></p>
+
+    <!-- 9d -->
+     <!-- <input type="text" placeholder="Type your name" class="js-input-element">
+     <button onclick="
+        const inputEle = document.querySelector('.js-input-element');
+        document.querySelector('.js-text').innerHTML = `Your name is: ${inputEle.value}`;
+        
+     ">Submit</button>
+    <p class="js-text"></p> -->
+
+    <!-- 9e -->
+    <input type="text" placeholder="Type your name"     class="js-input-element" onkeydown=
+        "handleNameOutput(event)">
+    
+    <button onclick="
+        handleInputEle();
+     ">Submit</button>
+    
+    <p class="js-text"></p>
+
+    <script>
+        // 9e and 9f
+        function handleNameOutput(event){
+            console.log(event)
+            if (event.key === 'Enter'){
+                handleInputEle()
+            }
+        }
+
+        function handleInputEle(){
+            const inputEle = document.querySelector('.js-input-element');
+            document.querySelector('.js-text').innerHTML = `Your name is: ${inputEle.value}`;
+        }
+    </script>
+</body>
+</html>

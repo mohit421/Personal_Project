@@ -1,0 +1,13 @@
+.game {
+    border: none;
+    background-color: rgb(230,230,230);
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.is-toggled{
+    background-color: black;
+    color: #fff;
+}
