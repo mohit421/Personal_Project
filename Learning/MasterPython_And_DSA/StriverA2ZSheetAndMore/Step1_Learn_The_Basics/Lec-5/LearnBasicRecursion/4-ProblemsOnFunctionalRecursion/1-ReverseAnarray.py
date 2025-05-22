@@ -22,7 +22,11 @@ if __name__ == "__main__":
 
 
 # Solution 2
+'''
+Time Complexity: O(n), single-pass involved.
 
+Space Complexity: O(1) 
+'''
 def revFunc1(i,ar):
     n = len(ar)
     if i>n//2:
@@ -36,3 +40,72 @@ if __name__ == "__main__":
     revFunc1(0,ar)
     printArr(ar)
 
+# Solution 3
+def reverseArray(arr, n):
+    p1 = 0
+    p2 = n - 1
+    while p1 < p2:
+        arr[p1], arr[p2] = arr[p2], arr[p1]
+        p1 += 1
+        p2 -= 1
+    printArray(arr, n)
+
+# Driver Code
+if __name__ == "__main__":
+    arr = [5, 4, 3, 2, 1]
+    n = len(arr)
+    reverseArray(arr, n)
+
+
+# Solution 4
+
+'''
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+'''
+def printArray(arr, n):
+    print("The reversed array is:- ")
+    for i in range(n):
+        print(arr[i], end=" ")
+    print()
+
+
+def reverseArray(arr, n):
+    arr.reverse()
+
+
+# Driver Code
+if __name__ == "__main__":
+    arr = [5, 4, 3, 2, 1]
+    n = len(arr)
+    reverseArray(arr, n)
+    printArray(arr, n)
+
+
+
+# Solution 5
+'''
+Time Complexity: O(n), single-pass for reversing array.
+
+Space Complexity: O(n), for the extra array used.
+'''
+def printArray(arr, n):
+    print("The reversed array is:- ")
+    for i in range(n):
+        print(arr[i], end=" ")
+    print()
+
+
+def reverseArray(arr, n):
+    ans = [0] * n
+    for i in range(n - 1, -1, -1):
+        ans[n - i - 1] = arr[i]
+    printArray(ans, n)
+
+
+# Driver Code
+if __name__ == "__main__":
+    arr = [5, 4, 3, 2, 1]
+    n = len(arr)
+    reverseArray(arr, n)
