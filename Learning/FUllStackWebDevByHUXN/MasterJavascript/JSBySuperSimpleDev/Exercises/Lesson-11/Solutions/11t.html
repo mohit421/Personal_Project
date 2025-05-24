@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11s solution</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods) {
+            let count = 0
+            let reversedFoods = foods.reverse();
+            const res = [];
+            for (let i = 0;i<reversedFoods.length; i++){
+                if(reversedFoods[i] === 'egg' && count <2) {
+                    count++;
+                    continue
+                }
+                res.push(reversedFoods[i]);
+            }
+            return res.reverse();
+        }
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']))
+    </script>
+</body>
+</html>

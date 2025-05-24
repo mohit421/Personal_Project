@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11s solution</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods) {
+            // To prevent modifying the original array, we
+            // can create a copy of the array using .slice()
+            const foodsCopy = foods.slice();
+            const reversedFoods = foodsCopy.reverse();
+            const res = []
+            let eggRemoved = 0;
+
+            for (let i = 0;i<reversedFoods.length; i++){
+                if(reversedFoods[i] === 'egg' && eggRemoved <2) {
+                    eggRemoved++;
+                    continue;
+                }
+                res.push(reversedFoods[i]);
+            }
+            return res.reverse();
+        }
+        const foods = ['egg', 'apple', 'egg', 'egg', 'ham']
+        console.log(removeEgg(foods))
+        console.log(foods);
+    </script>
+</body>
+</html>

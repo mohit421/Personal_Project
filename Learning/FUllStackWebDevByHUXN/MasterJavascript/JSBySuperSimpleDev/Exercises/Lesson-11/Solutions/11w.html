@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11w solution</title>
+</head>
+<body>
+    <script>
+        function findIndex(array, word) {
+            for (let i = 0;i < array.length; i++){
+                if (array[i] === word) {
+                    return i
+                }
+            }
+            return -1;
+        }
+        
+        function unique(array) {
+            const res = [];
+            for(let i = 0; i< array.length; i++) {
+                const word = array[i];
+                if(findIndex(res, word) === -1){
+                    res.push(word);
+                }
+            }
+            return res
+        }
+        console.log(unique(['green', 'red', 'blue', 'red'], 'red'))
+        console.log(unique(['green', 'red', 'blue', 'red'], 'yellow'));
+        
+        
+    </script>
+</body>
+</html>

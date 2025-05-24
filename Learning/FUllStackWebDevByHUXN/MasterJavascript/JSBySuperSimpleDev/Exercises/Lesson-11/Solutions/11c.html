@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11c SOlutions</title>
+</head>
+<body>
+    <script>
+        function arraySwap(array) {
+            let temp = array[0];
+            array[0] = array[array.length-1];
+            array[array.length-1] = temp;
+            return array;
+        }
+        console.log(arraySwap([1, 20, 22, 24, 5]));
+        console.log(arraySwap(['hi','hello', 'good']));
+    </script>
+</body>
+</html>

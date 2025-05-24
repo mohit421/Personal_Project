@@ -5,3 +5,4 @@
 ## Parameterised and Functional Recursion
 
     - Paraameterised
+    - Functional :- We don't want, parameter to do the work.
