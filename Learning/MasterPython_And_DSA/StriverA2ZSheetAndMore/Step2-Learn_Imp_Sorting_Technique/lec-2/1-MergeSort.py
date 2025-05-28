@@ -99,5 +99,6 @@ low = 0
 mid = n // 2 - 1
 high = n - 1
 
+
 mergeSort(arr, low, high)
 print(*arr)

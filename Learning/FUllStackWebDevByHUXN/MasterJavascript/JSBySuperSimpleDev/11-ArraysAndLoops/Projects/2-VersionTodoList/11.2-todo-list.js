@@ -8,7 +8,8 @@ function renderTodoList () {
     for (let i = 0; i< todoList.length ; i++) {
         const todo = todoList[i];
         // generating the html
-        const html = `<p>${todo}</p>`;
+        const html = `
+            <p>${todo}</p>`;
         todoListHTML += html 
 
     }
