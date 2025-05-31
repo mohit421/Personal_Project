@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12i</title>
+</head>
+<body>
+    <button  class="add-btn" onclick="
+        incrementAdd();
+        displayNotification();
+    ">Add</button>
+    <button class="remove-btn" onclick="
+        if(messages>0){
+            decrementRemove();
+        }
+
+        if (messages === 0){
+            stopNotification();
+        }
+        
+        
+    ">Remove</button>
+    <script>
+       
+        // Challenge Exercise 12h
+        let messages = 2;
+        let inervalId;
+        let isDisplayNotification;
+        displayNotification();
+
+        function displayNotification() {
+
+            if (isDisplayNotification) {
+                return;
+            }
+            isDisplayNotification = true 
+            intervalId = setInterval(function() {
+                if(document.title === 'App'){
+                    document.title = `(${messages}) New Messages`
+                } else {
+                    document.title = 'App'
+                }
+            },1000);
+        }
+        function stopNotification() {
+            isDisplayNotification = false
+            clearInterval(intervalId)
+            document.title = 'App';
+        }
+        function incrementAdd(){
+            messages += 1;
+        }
+        function decrementRemove() {
+            messages -= 1;
+        }
+        
+
+        
+    </script>
+</body>
+</html>

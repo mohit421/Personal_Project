@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="add-cart-btn" onclick="
+        addToCartBtn();
+    ">Add to cart</button>
+    <p class="add-to-cart-text"></p>
+    <button  class="add-btn" onclick="
+        incrementAdd();
+    ">Add</button>
+    <button class="remove-btn" onclick="
+        decrementRemove();
+    ">Remove</button>
+    <script>
+        // Challenges exercise 12f
+        let timeoutId;
+         function addToCartBtn() {
+            const addToCartBtn = document.querySelector('.add-to-cart-text')
+            addToCartBtn.innerHTML = 'Added';
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(function() {
+                addToCartBtn.innerHTML = ''
+            },2000) 
+        }
+
+        // Challenge Exercise 12g 
+        /*
+        setInterval(function() {
+            if(document.title === 'App'){
+                document.title = '(2) New Messages'
+            } else {
+                document.title = 'App'
+            }
+        });
+        */
+
+        // Challenge Exercise 12h
+        let messages = 2;
+        function incrementAdd(){
+            messages += 1;
+        }
+        function decrementRemove() {
+            messages -= 1;
+        }
+        setInterval(function() {
+            if(document.title === 'App' && messages>0){
+                document.title = `(${messages}) New Messages`
+            } else {
+                document.title = 'App'
+            }
+        });
+
+        // 12i
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Advanced Functions</title>
+</head>
+<body>
+    
+    <!-- supersimple.dev/projects/advanced-functions -->
+    <script>
+        // Another way to loop through an array
+        // In for loop we have used continue and break but in foreach method we don't this property
+        // so we use return function
+        
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value, index) {
+            // alternate use of continue 
+            if (value === 'wash dishes') {
+                // it's do the same thing like conitnue
+                return;
+            }
+            // alternate use of break statement
+            // if we need to use break then it's better to use a regular for loop
+            console.log(index);
+            console.log(value);
+        });
+        /*
+           1.  first way to loop through an array is 
+            for (let i=0;i<array.length;i++){
+            ...
+            }
+
+            2. Another way:
+            .forEach()
+        */
+    </script>
+</body>
+</html>

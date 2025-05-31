@@ -102,3 +102,8 @@ high = n - 1
 
 mergeSort(arr, low, high)
 print(*arr)
+
+
+
+# Merge sort by strivers
+

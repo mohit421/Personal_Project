@@ -1,3 +1,7 @@
+
+'''
+It also is not a stable sorting algorithm. For example consider the collection [4, 2, 3, 4, 1]. After the first round of selection sort, we get the array [1, 2, 3, 4, 4]. This array is sorted, but it does not preserve the ordering of equal elements.
+'''
 from typing import List
 
 class Solution:

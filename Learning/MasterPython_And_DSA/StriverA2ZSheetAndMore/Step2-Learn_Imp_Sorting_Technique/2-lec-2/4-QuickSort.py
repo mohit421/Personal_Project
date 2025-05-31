@@ -162,6 +162,9 @@ Q) Compare Merge Sort with Quick Sort?
 - When we don't need stability then quick sort is definetly the fastest algorithm, Quick sort or its variation intro sort version, they are the fastest variation actually use in library also.
 
 - If we need stability also then merge sort is preferred
+
+- There has been stydied say that Hoore's partition is 3x faster tgab lomuto partition on average
+
 '''
 
 

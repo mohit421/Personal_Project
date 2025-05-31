@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Advanced Functions</title>
+</head>
+<body>
+    
+    <!-- supersimple.dev/projects/advanced-functions -->
+    <script>
+        // functions are values
+
+        /*
+            Below functions have some advantages
+            - Easier to read
+            - gives features called hoisting
+        */
+        function greeting() {
+            console.log("hello");
+        }
+        // calling the function (running the function)
+
+        // Advanced features of Functins
+        /*
+            Functions are also values 
+            Types of values:
+                - numbers, strings, booleans
+
+            
+        */
+        greeting()
+
+        const num = 2;
+        const function1 = function greeting() {
+            console.log('hello2');
+        };
+
+        console.log(function1);
+        console.log(typeof function1);
+
+        function1();
+
+        //  in function1 greeting() func is not available that not needed bcuz we can call that using function1() that is known as anonymous function(function without a name)
+        /*
+            Disadvantages of below one:
+            - Hoisting doesn't work if we create a anonoymous function like below one 
+
+            - In Javascript functions are values:-
+                - We can save it in a variable
+
+            - what else can we do with a value
+                - save a value in an object
+
+        */
+        const func2 = function () {
+            console.log("hello3")
+        }
+
+
+        const object1 = {
+            num: 2,
+            fun: function greeting() {
+                console.log('hello4')
+            }
+        }
+        object1.fun()
+
+        /*
+            What else can we do with a value?
+                - pass a value into a function
+        */
+
+        function display(params) {
+            console.log(params);
+        }
+        display(2);
+
+        // passing a function into another function is called Callback function
+        // anything we can do with a value we can do with functions as well
+        function run(param) {
+            param()
+        }
+        run(function() {
+            console.log('hello5');
+        });
+
+
+        /*
+            setTimeout():-
+                - allows us to run a function in the future
+                - it is a builtin function
+
+                - 1st parameter is a function we want to run in the future
+                - 2nd paramter : how long to wait before running this function (number in millisecond)
+                1000 milliseconds = 1 second
+        */
+
+         setTimeout(function() {
+            console.log('timeout');
+            console.log('timeout2');
+         },3000);
+         
+        /*
+            Displays next line first and then after 3 second it display timeout so what's happening here why are they reversed
+            bcuz setTimeout sets up a timer and after 3 seconds it will call this function however this actually doesn't actually wait for the 3 seconds to finish it just sets up the timer and immediately goes to the next line is displayed first 
+            So this is called asynchronous code 
+
+            Asynchronous Code :-
+                - won't wait for a line to finish before going to the next line 
+            
+                Synchronous Code:-
+                - Will wait for one line to finish before going to the next line
+
+            - ALl the code we have written so far has been synchronous code 
+            - IN addition all the code inside the function setTimeout() is also synchronous code
+
+            - Don't worry, All the code we normally write will be synchronous code , It will run line by line as usual
+            the only time that code becomes asynchronous is when we use certain features of JavaScript like setTimeout is the only part that is asynchronous.
+
+            Advantage of setTimout is being asynchronous code :
+            - It doesn't block our code for 3 seconds waiting for this timer to finish, it just sets up the timer in the background and then goes to the next line of code
+            - This allow our code to do other things while this timer is running in the background and this is similar to real life
+        */
+
+
+        //  Asynchronous code
+        console.log('next line');
+
+         /*
+            setInterval is builtin function so we can 
+            1st paramenter: A function we want to run in the future
+            2nd paramter: 
+         */
+        setInterval(function() {
+            console.log('interval');
+        }, 3000);
+        console.log('next line 2')
+    </script>
+</body>
+</html>

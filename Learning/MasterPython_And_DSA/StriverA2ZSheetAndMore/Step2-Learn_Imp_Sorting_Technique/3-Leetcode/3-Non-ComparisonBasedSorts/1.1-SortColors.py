@@ -21,7 +21,18 @@
 | `counts`     | k + 1 | O(k)  |
 | `sorted_lst` | n     | O(n)  |
 
+-----------
 
+ Special Case: sortColors for Only 0, 1, 2 (as per LeetCode problem)
+If you're using this code for the classic LeetCode 75 - Sort Colors problem (which contains only 0s, 1s, and 2s), then:
+
+k = 2, so k is constant
+
+Therefore:
+
+Time Complexity = O(n)
+
+Space Complexity = O(n)
 '''
 
 class Solution:

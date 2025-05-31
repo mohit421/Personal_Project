@@ -29,48 +29,48 @@ Time and space complexity:- O(n + K)
 # Code 
 
 
-# class Solution:
-#     def counting_sort(self, lst) -> None:
-#         """
-#         Sorts a list of integers where minimum value is 0 and maximum value is K
-#         """
-#         K = max(lst)
-#         counts = [0] * (K + 1)
-#         for elem in lst:
-#             counts[elem] += 1
+class Solution:
+    def counting_sort(self, lst) -> None:
+        """
+        Sorts a list of integers where minimum value is 0 and maximum value is K
+        """
+        K = max(lst)
+        counts = [0] * (K + 1)
+        for elem in lst:
+            counts[elem] += 1
 
-#         # we now overwrite our original counts with the starting index
-#         # of each element in the final sorted array
-#         starting_index = 0
-#         for i, count in enumerate(counts):
-#             counts[i] = starting_index
-#             starting_index += count
+        # we now overwrite our original counts with the starting index
+        # of each element in the final sorted array
+        starting_index = 0
+        for i, count in enumerate(counts):
+            counts[i] = starting_index
+            starting_index += count
 
-#         sorted_lst = [0] * len(lst)
+        sorted_lst = [0] * len(lst)
 
-#         for elem in lst:
-#             sorted_lst[counts[elem]] = elem
-#             counts[elem] += 1
+        for elem in lst:
+            sorted_lst[counts[elem]] = elem
+            counts[elem] += 1
 
-#         for i in range(len(lst)):
-#             lst[i] = sorted_lst[i]
+        for i in range(len(lst)):
+            lst[i] = sorted_lst[i]
 
-# # ---- USER INPUT PART ----
-# if __name__ == "__main__":
-#     input_str = input("Enter a list of non-negative integers (comma-separated): ")
+# ---- USER INPUT PART ----
+if __name__ == "__main__":
+    input_str = input("Enter a list of non-negative integers (comma-separated): ")
     
-#     # Convert string input to list of integers
-#     try:
-#         input_list = list(map(int, input_str.split(',')))
-#         if any(n < 0 for n in input_list):
-#             raise ValueError("Counting sort only works with non-negative integers.")
+    # Convert string input to list of integers
+    try:
+        input_list = list(map(int, input_str.split(',')))
+        if any(n < 0 for n in input_list):
+            raise ValueError("Counting sort only works with non-negative integers.")
 
-#         s = Solution()
-#         s.counting_sort(input_list)
-#         print("Sorted list:", input_list)
+        s = Solution()
+        s.counting_sort(input_list)
+        print("Sorted list:", input_list)
     
-#     except ValueError as e:
-#         print("Invalid input:", e)
+    except ValueError as e:
+        print("Invalid input:", e)
 
 
 '''
