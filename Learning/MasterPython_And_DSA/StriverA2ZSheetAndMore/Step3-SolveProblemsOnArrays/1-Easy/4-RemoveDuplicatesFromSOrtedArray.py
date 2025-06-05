@@ -1,5 +1,11 @@
 # Solution 1
+'''
+Complexity Analysis
 
+Time Complexity: O(N)
+
+Space Complexity: O(1)
+'''
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         i = 0
@@ -56,4 +62,19 @@ class Solution:
         return count_uniq_nums
         
             
-                
+
+# Solution 4
+'''
+| Method                           | Preserves Order | In-place | Time       | Space |
+| -------------------------------- | --------------- | -------- | ---------- | ----- |
+| Two-pointer (best for sorted)    | ✅ Sorted        | ✅ Yes    | O(n)       | O(1)  |
+| `sorted(set(arr))`               | ✅ Sorted        | ❌ No     | O(n log n) | O(n)  |
+| Loop with `set` (original order) | ✅ Original      | ✅ Yes    | O(n)       | O(n)  |
+
+'''
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        unique_sorted = sorted(set(nums))  # removes duplicates and sorts
+        for i in range(len(unique_sorted)):
+            nums[i] = unique_sorted[i]     # write back to nums
+        return len(unique_sorted)
