@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12p and 12q </title>
+  </head>
+  <body>
+    <!--
+      This is the updated code for exercise 12c
+      just as an example. Feel free, to update
+      12d - 12i as well for more practice.
+    -->
+    <button class="js-button js-update-btn">Start</button>
+
+    <script>
+
+      const updateBtn = document.querySelector(".js-update-btn");
+      updateBtn.addEventListener('click',()=>{
+        updateButton();
+      })
+      function updateButton() {
+        const button = document.querySelector('.js-button');
+
+        // The function below was changed
+        // to an arrow function.
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

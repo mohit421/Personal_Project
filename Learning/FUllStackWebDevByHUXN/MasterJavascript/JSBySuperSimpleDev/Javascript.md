@@ -471,3 +471,35 @@ return computerMove;
     - We worked on three projects using the DOM
     - We learnt how to make elements interactive with the keyboard using onkeydown="..."
     - More details about strings and window objects
+
+### HTML, CSS and JavaScript Together
+
+- Reviewed CSS, and added CSS to projects
+- .classList
+- Finished Rock, Paper, Scissors
+- Organize Javascript and CSS code into separate files
+
+##### Main Idea of Javascript
+
+- Save the data
+- Generate the HTMl
+- Make it interactive
+
+### Array and Loops
+
+- Arrays=list of values
+- Loops(while loop, for loop)
+- Accumulator Pattern
+- Created a Todo List project
+- Arrays are references, destructuring
+- More features of loops:
+  break, continue, loops inside a function
+
+### Advanced Function
+
+- functions are value
+- setTimeout(), setInterval()
+- .forEach() :- Cleaner way to looping through an array
+- Arrow functions, .addEventLinstener()
+- .filter(), .map():- array method
+- Closure

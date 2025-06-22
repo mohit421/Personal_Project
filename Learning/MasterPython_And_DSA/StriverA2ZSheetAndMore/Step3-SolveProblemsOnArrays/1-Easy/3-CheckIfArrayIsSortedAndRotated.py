@@ -34,3 +34,27 @@ Time complexity: O(n
 class Solution:
     def check(self, nums: List[int]) -> bool:
         return sum(nums[i-1]>nums[i] for i in range(len(nums)))<2
+    
+
+# Solution 3
+'''
+| Aspect            | Value                             |
+| ----------------- | --------------------------------- |
+| Time Complexity   | **O(n)**                          |
+| Space Complexity  | **O(1)**                          |
+| In-place?         | ✅ Yes                             |
+| Stable for Input? | ✅ Sorted or rotated sorted arrays |
+
+'''
+class Solution:
+    def check(self, nums: List[int]) -> bool:
+        x = 0
+        for i in range(len(nums)-1):
+            if nums[i]>nums[i+1]:
+                x = i+1
+                break
+        
+        for i in range(x, x+len(nums) - 1):
+            if nums[i%len(nums)] > nums[(i+1)%len(nums)]:
+                return False
+        return True

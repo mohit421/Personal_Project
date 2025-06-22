@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12n exercise soln</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        /*
+        function removeEgg(foods){
+            return foods.filter((value) =>{
+                if (value=="egg"){
+                    return false
+                }
+                else {
+                    return true
+                }
+            }
+        )}
+        console.log(removeEgg(["egg","apple","egg","egg","ham"]));
+            */
+
+        // 12n
+
+        function removeEgg(foods){
+            let count = 0
+            return foods.filter((value) =>{
+                if (value=="egg" && count<2){
+                    count++;
+                    return false
+                }
+                else {
+                    return true
+                }
+            }
+        )}
+        console.log(removeEgg(["egg","apple","egg","egg","ham"]));
+    </script>
+</body>
+</html>

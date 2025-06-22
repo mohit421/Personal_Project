@@ -1,0 +1,71 @@
+<!-- 
+ 
+A shorter way to write functions Arrow Functions
+
+- Arrow Functions mostly work the same as regular functions
+
+- Differences :-
+
+Arrow Functions have shortcuts whereas regular functions don't
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW Function</title>
+</head>
+<body>
+    <script>
+
+        // to convert below regular func tion to arrow function
+
+        //  [
+        //     'make dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ].forEach(function(value, index) {
+        //     if (value === 'wash dishes') {
+        //         return;
+        //     } 
+        //     console.log(index);
+        //     console.log(value);
+        // });
+
+            [
+                'make dinner',
+                'wash dishes',
+                'watch youtube'
+            ].forEach((value, index) => {
+                if (value === 'wash dishes') {
+                    return;
+                } 
+                console.log(index);
+                console.log(value);
+            });
+        const regularFunction = function(param, param2) {
+            console.log('hello');
+            return 5;
+        }
+        regularFunction()
+        const arrowFunction = (param, param2) => {
+            console.log('hello');
+            return 5;
+        }
+        arrowFunction();
+
+        // if we have one parameter than () this braces are options
+        const oneParam = param => {
+            console.log(param+1);
+        }
+        oneParam(2);
+
+        //  if we have one line then we can remove curly braces likke below ans we can also remove return statement
+        const oneLine = () =>   2 + 3;
+        console.log(oneLine());
+
+    </script>
+</body>
+</html>

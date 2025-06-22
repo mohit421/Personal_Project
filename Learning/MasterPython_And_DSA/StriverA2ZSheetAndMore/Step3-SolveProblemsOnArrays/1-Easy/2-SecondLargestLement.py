@@ -42,7 +42,11 @@ class Solution:
 # Optimised solution
 
 '''
+Complexity Analysis
 
+Time Complexity: O(N), We do two linear traversals in our array
+
+Space Complexity: O(1)
 '''
 
 def secondLargest(arr,n):

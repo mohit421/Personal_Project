@@ -6,12 +6,32 @@
     <title>Lesson 12 Advanced Functions</title>
 </head>
 <body>
-    
+    <button onclick="" class="js-button">Click</button>
+
     <!-- supersimple.dev/projects/advanced-functions -->
     <script>
+        // addEvenetListener adds multiple event linsteners for one event
+        const buttonElement = document.querySelector(".js-button");
+
+        const eventListener = ()=>{
+            console.log('click');
+        }
+        buttonElement.addEventListener('click',eventListener);
+        buttonElement.addEventListener('click',()=> {
+            console.log("click2");
+        });
+
+        // We can remove an event Listener using removeEventLinstener
+        
+        buttonElement.removeEventListener('click',eventListener);
+
         // Another way to loop through an array
         // In for loop we have used continue and break but in foreach method we don't this property
         // so we use return function
+        // addEventListener gives us more control over enentListener,
+        // 1. We can add Multiple event listeners to an event
+        // 2. We can also remove an event listener 
+        //  Best Practice is to use .addEventListener() instead of onclick=".."
         
         [
             'make dinner',
@@ -22,7 +42,7 @@
             if (value === 'wash dishes') {
                 // it's do the same thing like conitnue
                 return;
-            }
+            } 
             // alternate use of break statement
             // if we need to use break then it's better to use a regular for loop
             console.log(index);
@@ -37,6 +57,64 @@
             2. Another way:
             .forEach()
         */
+
+
+        // we can use arrow function inside an object as well
+
+        const object2 = {
+            method: () => {
+
+            },
+            // shorthand function syntax for arrow function is easier to read in object
+            method() {
+
+            }
+
+        }
+
+        // Array method :filter -> Filter works the same way like forEach
+        /*
+            what filter does?
+            - It creates a new array []
+            - if inner function return true,
+                - it put value in array
+            - return false.
+                - not put value in array
+
+        */
+        console.log([1,-3,5].filter((value, index) => {
+            // remove nefative number from this array
+            // if (value>=0){
+            //     return true;
+            // }
+            // else {
+            //     return false
+            // }
+
+            // shortand of above if else code
+            return value >= 0;
+            // return true;
+            // return false;
+        }));
+
+
+
+        // array method : map
+        /*
+            It works just like forEach and filter
+            - map can transform an array into another array based onteh return value
+        */
+        console.log([1,1,4].map((value, index) => {
+            return value + 10;
+        }));
+
+        // Shortcuts of arrow functions
+        console.log([1,1,4].map(value => value + 10));
+
+
+        // Feature of function called closure
+
+        
     </script>
 </body>
 </html>
