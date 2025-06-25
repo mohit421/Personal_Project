@@ -46,3 +46,37 @@ class Solution:
         for i in range(cnt0+cnt1,n):
             nums[i] = 2
         return nums
+    
+
+# Dutch National Flag Algorithm :- Optimal code
+
+'''
+[0...low-1) -> 0 
+[low, mid-1] -> 1
+[high+1, n-1] -> 2
+
+Link :- 
+https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/
+'''
+
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        low = 0
+        mid = 0
+        high = len(nums)-1
+        while high+1>mid:
+            if nums[mid]==0:
+                nums[low],nums[mid] = nums[mid],nums[low]
+                low += 1
+                mid += 1
+            elif nums[mid] == 1:
+                 mid += 1
+                
+            elif nums[mid] == 2:
+                nums[mid],nums[high] = nums[high],nums[mid]
+                high -= 1
+        
+
