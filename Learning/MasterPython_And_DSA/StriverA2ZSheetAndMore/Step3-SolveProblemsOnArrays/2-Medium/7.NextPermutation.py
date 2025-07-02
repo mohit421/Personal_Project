@@ -3,6 +3,10 @@ Problem:- Next Permutation
 link:- https://leetcode.com/problems/next-permutation/description/
 '''
 
+
+#  solution :- https://leetcode.com/problems/next-permutation/solutions/6894687/3-solution-brute-force-better-optimised-ccqg3/
+
+
 # Solution 1
 
 # Brute force approach
@@ -102,6 +106,14 @@ Final resul:-
 nums = [1, 5, 1]  ✅
 
 
+Step	                Time Complexity	          Space Complexity
+Generate Permutations	  O(n * n!)       	            O(n * n!)
+Remove Duplicates(set)    O(n * n!)	                    O(n * n!)
+Sort Permutations	     O(n^2 \log n \cdot n!)	        O(n * n!)
+Find Index	                O(n * n!)	                 O(1)
+Copy to nums	                O(n)	                 O(1)
+Overall	                 O(n^2 \log n \cdot n!)	        O(n * n!)
+
 '''
 
 class Solution:
@@ -116,3 +128,37 @@ class Solution:
         for i in range(len(nums)):
             nums[i] = next_perm[i]
 
+
+
+# Optimizesd approach soltuiopn 3
+
+
+class Solution:
+    def nextPermutation(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        idx = -1
+        n = len(nums)
+        
+        # Step 1: Find the first decreasing element from the end
+        for i in range(n - 2, -1, -1):
+            if nums[i] < nums[i + 1]:
+                idx = i
+                break
+        
+        # Step 2: If no such element, reverse the whole array
+        if idx == -1:
+            nums.reverse()
+            return
+        
+        # Step 3: Find the smallest element larger than nums[idx] to the right
+        for i in range(n - 1, idx, -1):
+            if nums[i] > nums[idx]:
+                nums[i], nums[idx] = nums[idx], nums[i]
+                break
+        
+        # Step 4: Reverse the suffix
+        nums[idx + 1:] = reversed(nums[idx + 1:])
+        return nums
+        
