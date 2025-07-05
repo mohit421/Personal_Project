@@ -1,2 +1,2 @@
 # Personal_Project
-Here is track of my own projecct progress.
+Here is track of my own progress.
