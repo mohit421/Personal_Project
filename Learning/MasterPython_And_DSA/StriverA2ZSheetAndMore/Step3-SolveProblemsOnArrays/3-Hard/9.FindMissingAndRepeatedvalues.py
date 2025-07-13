@@ -2,7 +2,7 @@
 link:- https://leetcode.com/problems/find-missing-and-repeated-values/description/
 '''
 
-# Solution 1 brute force 
+# Solution 1 
 '''
 TC:- O(N^2) + O(N^2) = O(2*N^2) = O(N^2)
 SC:- O(N^2) :- bcuz storing freq element till 1 to n^2

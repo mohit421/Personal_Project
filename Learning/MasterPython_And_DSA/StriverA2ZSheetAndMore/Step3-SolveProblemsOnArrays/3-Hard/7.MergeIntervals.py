@@ -61,3 +61,18 @@ Complexity
 Time complexity: O(nlogn) (for sorting)
 Space complexity: O(n) (for storing merged intervals)
 '''
+
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        n = len(intervals)
+        ans= []
+        intervals.sort()
+        prev = intervals[0]
+        for i in range(1,n):
+            if intervals[i][0]>prev[1]:
+                prev[1] = max(prev[1],intervals[i][1])
+            else:
+                ans.append(prev)
+                prev = intervals[i]
+        ans.append(prev)
+        return ans

@@ -58,6 +58,23 @@ class Solution:
                 ans.append(num)
         return ans
     
+# withour using counter 
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        counter = {}
+        ans = []
+
+        n = len(nums)
+        for ele in nums:
+            counter[ele] = counter.get(ele,0) + 1
+        for ele,cnt in counter.items():
+            if cnt>n//3:
+                ans.append(ele)
+        if len(ans)==2 and ans[0] >ans[1]:
+            ans[0],ans[1] = ans[1],ans[0]
+        return  ans
+
 
 # Extended Boyer-Moore Majority Voting 
 

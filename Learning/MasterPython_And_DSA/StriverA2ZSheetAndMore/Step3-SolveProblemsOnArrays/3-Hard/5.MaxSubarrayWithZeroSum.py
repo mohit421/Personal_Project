@@ -52,7 +52,7 @@ class Solution:
 '''
 Complexity Analysis
 
-Time Complexity: O(N), as we are traversing the array only once
+Time Complexity: O(NLogN), as we are traversing the array only once
 
 Space Complexity: O(N), in the worst case we would insert all array elements prefix sum into our hashmap
 '''

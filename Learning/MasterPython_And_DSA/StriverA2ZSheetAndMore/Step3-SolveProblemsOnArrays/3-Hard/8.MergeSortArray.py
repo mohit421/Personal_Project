@@ -4,7 +4,7 @@ Problem youtube solution link:- vhttps://www.youtube.com/watch?v=P1Ic85RarKY&ab_
 
 '''
 
-# Solution 1 Brute force
+# Solution 1 
 '''
 TC:- O(N) + O((M+N)Log(M+N))
 SC:- (1)
@@ -21,9 +21,14 @@ class Solution:
         return nums1
     
 
-# Solution 2
-#  USing merge sort copncept 
+# Solution 2 Brute force
 
+'''
+Time Complexity: O(n+m) + O(n+m), where n and m are the sizes of the given arrays.
+Reason: O(n+m) is for copying the elements from arr1[] and arr2[] to arr3[]. And another O(n+m) is for filling back the two given arrays from arr3[].
+
+Space Complexity: O(n+m) as we use an extra array of size n+m.
+'''
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """

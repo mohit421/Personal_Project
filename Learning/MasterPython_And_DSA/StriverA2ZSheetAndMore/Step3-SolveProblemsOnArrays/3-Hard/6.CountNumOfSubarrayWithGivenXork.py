@@ -51,5 +51,26 @@ class Solution:
 
 
 # Solution 3 Optimized Solution 
+'''
+Complexity Analysis
 
+Time Complexity: O(N) or O(N*logN) depending on which map data structure we are using, where N = size of the array.
+Reason: For example, if we are using an unordered_map data structure in C++ the time complexity will be O(N) but if we are using a map data structure, the time complexity will be O(N*logN). The least complexity will be O(N) as we are using a loop to traverse the array. Point to remember for unordered_map in the worst case, the searching time increases to O(N), and hence the overall time complexity increases to O(N2). 
 
+Space Complexity: O(N) as we are using a map data structure.
+'''
+class Solution:
+    def subarrayXor(self, arr, k):
+        # code here
+        n = len(arr)
+        cnt = 0
+        dic = {}
+        preXor = 0
+        dic[preXor] = 1
+        for i in range(n):
+            preXor = preXor ^ arr[i]
+            rem = preXor ^ k
+            cnt += dic.get(rem,0)
+            dic[preXor] = dic.get(preXor,0) + 1
+        
+        return cnt
