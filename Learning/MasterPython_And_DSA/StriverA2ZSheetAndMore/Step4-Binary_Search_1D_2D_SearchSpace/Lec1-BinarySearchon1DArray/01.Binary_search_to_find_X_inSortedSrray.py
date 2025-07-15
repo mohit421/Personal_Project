@@ -2,6 +2,14 @@
 LinK:- https://www.notion.so/DSA-Learning-Tracker-2025-by-Dev-Junk-22097d48b97a80b9a020d70e2426c288?pvs=47&qid=&origin=
 '''
 
+''''
+For more details go to :- https://takeuforward.org/data-structure/binary-search-explained/
+Note:
+
+Binary search is only applicable in a sorted search space. The sorted search space does not necessarily have to be a sorted array. It can be anything but the search space must be sorted.
+In binary search, we generally divide the search space into two equal halves and then try to locate which half contains the target. According to that, we shrink the search space size.
+'''
+
 # Soluton 1 Iterative ways
 '''
 Time Complexity:
@@ -14,6 +22,23 @@ If a number n can be divided by 2 for x times:
 Therefore, x = logn (base is 2)
 So the overall time complexity is O(logN), where N = size of the given array.
 '''
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int binarySearch(vector<int>& nums, int target) {
+    int n = nums.size(); //size of the array
+    int low = 0, high = n - 1;
+
+    // Perform the steps:
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (nums[mid] == target) return mid;
+        else if (target > nums[mid]) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}
 
 
 # Solution 2 Recursive appraoch
