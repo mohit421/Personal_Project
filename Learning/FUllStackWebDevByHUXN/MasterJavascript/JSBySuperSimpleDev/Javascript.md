@@ -503,3 +503,10 @@ return computerMove;
 - Arrow functions, .addEventLinstener()
 - .filter(), .map():- array method
 - Closure
+
+### Start the Amazon Project and Intro to Git
+
+- Main Idea of Javascript
+  1. Save the Data
+  2. Generate the HTML
+  3. Make it Interactive
