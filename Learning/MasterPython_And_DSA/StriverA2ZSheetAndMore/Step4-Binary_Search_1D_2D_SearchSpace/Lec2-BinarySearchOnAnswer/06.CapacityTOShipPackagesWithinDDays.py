@@ -37,7 +37,10 @@ class Solution:
 
 # Solution  2 Using binary search
 '''
+Time Complexity: O(N * log(sum(weights[]) - max(weights[]) + 1)), where sum(weights[]) = summation of all the weights, max(weights[]) = maximum of all the weights, N = size of the weights array.
+Reason: We are applying binary search on the range [max(weights[]), sum(weights[])]. For every possible answer ‘mid’, we are calling findDays() function. Now, inside the findDays() function, we are using a loop that runs for N times.
 
+Space Complexity: O(1) as we are not using any extra space to solve this problem.
 '''
 
 class Solution:
