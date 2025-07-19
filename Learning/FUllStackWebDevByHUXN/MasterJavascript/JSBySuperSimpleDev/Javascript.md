@@ -507,6 +507,22 @@ return computerMove;
 ### Start the Amazon Project and Intro to Git
 
 - Main Idea of Javascript
+
   1. Save the Data
   2. Generate the HTML
   3. Make it Interactive
+
+- Syntax for s Data Attribute
+  1. is just an HTML attribute
+  2. have to start with "data-"
+  3. then give it any name
+     name ` value
+     for eg:- data-product-name="${product.name}"
+- Steps:
+  1. Check if the product is already in the cart
+  2. If it is in cart, increase the quantity
+  3. If it's not in the cart, add it to the cart.
+- two product can have the same name but different brands
+
+1. give each product an id
+2. this id should be unique
