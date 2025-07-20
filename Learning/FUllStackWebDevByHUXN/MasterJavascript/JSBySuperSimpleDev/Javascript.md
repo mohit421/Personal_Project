@@ -526,3 +526,7 @@ return computerMove;
 
 1. give each product an id
 2. this id should be unique
+
+- Steps:-
+  1. Calc the quantity
+  2. Put the quantithy on the page
