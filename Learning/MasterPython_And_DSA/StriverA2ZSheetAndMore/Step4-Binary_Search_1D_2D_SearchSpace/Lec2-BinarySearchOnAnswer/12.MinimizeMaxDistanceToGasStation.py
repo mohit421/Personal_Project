@@ -44,4 +44,32 @@ class Solution:
 
 
 # Solution 3 Optimised Solution iusing binary search
+'''
 
+'''
+import math
+
+class Solution:
+
+    def numOfGasStation(self, d, arr):
+        cnt = 0
+        for i in range(1, len(arr)):
+            dist = arr[i] - arr[i - 1]
+            cnt += math.floor(dist / d)
+        return cnt
+
+    def findSmallestMaxDist(self, arr, k):
+        lo, hi = 0.0, 0.0
+        for i in range(1, len(arr)):
+            hi = max(hi, arr[i] - arr[i - 1])
+
+        diff = 1e-6
+        while hi - lo > diff:
+            mid = (lo + hi) / 2.0
+            cnt = self.numOfGasStation(mid, arr)
+            if cnt > k:
+                lo = mid
+            else:
+                hi = mid
+
+        return round(hi, 2)

@@ -30,8 +30,6 @@ class Solution:
         return res
     
 
-
-
 # Solution 2 using array to little bit optimised above one
 
 class Solution:

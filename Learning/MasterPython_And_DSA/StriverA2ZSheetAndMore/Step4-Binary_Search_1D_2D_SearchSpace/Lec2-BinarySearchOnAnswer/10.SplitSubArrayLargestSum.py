@@ -29,7 +29,7 @@ class Solution:
     
 
     # Spluition 2 Optimisec one
-    class Solution:
+class Solution:
     def largestSubSm(self, nums: List[int], largeSm: int)-> int:
         n = len(nums)
         sm = 0
