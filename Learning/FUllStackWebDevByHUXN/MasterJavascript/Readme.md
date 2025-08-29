@@ -61,3 +61,11 @@ The most common and recommended way to connect HTML and JavaScript is using the 
   - we can't use dash(-) separated variable name
   - we can use underscore separated \*kbab case0, camelcase , snakecase variable,
   - we use camelcase letter in JS mostly
+
+# 13 Start the Amazon Project and Intro to Git
+
+- Started the Final Amazon Project
+- Set up and learned Git
+- Learned themain idea of JavaScript
+- Created list of products
+- Made the "Add to Cart" button interactive
