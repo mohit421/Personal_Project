@@ -656,5 +656,38 @@ const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a955kdhf",
+    image: "images/products/backpack.jpg",
+    name: "Backpack",
+    rating: {
+      stars: 4.5,
+      count: 3187
+    },
+    priceCents: 29000,
+    keywords: [
+      "backpack",
+      "bag",
+      "school bag",
+      "mens and woman"
+    ]
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a955kdf",
+    image: "images/products/umbrella.jpg",
+    name: "Umbrella",
+    rating: {
+      stars: 4.5,
+      count: 3100
+    },
+    priceCents: 2000,
+    keywords: [
+      "umbrella",
+      "chatta",
+      "rainy umberella",
+      "men umbrella",
+      "woman umbrella"
+    ]
   }
 ];
