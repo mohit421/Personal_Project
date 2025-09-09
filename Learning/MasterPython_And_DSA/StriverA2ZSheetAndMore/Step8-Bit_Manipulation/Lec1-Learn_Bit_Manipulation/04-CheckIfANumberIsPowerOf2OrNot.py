@@ -2,20 +2,12 @@
 
 '''
 
-# Solution
+
+# SOlution
 class Solution:
-    def isEven (self, n):
-        # code here 
-        
-        if n & 1:    # if last bit is 1 → odd
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n == 0:
             return False
-        else:   # if last bit is 0 → even
+        if n & (n-1) == 0:
             return True
-        
-
-
-# Solution
-
-class Solution:
-    def isEven(self, n):
-        return (n & 1) == 0
+        return False
