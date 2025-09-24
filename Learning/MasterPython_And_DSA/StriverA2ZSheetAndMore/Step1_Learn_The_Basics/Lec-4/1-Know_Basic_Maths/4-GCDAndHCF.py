@@ -58,3 +58,81 @@ class Solution:
         g = self.compute_gcd(a,b)
         lcm = a*b // g
         return [lcm,g]
+    
+
+# Striver solution 
+# Brute force
+'''
+TC;- O(min(n1,n2))
+'''
+class Solution:
+    def gcd(self, a, b):
+        # code here
+        gcd = 1
+        for i in range(1, min(a,b)+1):
+            if a%i == 0 and b%i==0:
+                gcd = i
+        
+        return gcd
+    
+
+
+# 
+'''
+TC:- O(min(n1,n2))
+'''
+class Solution:
+    def gcd(self, a, b):
+        # code here
+        gcd = 1
+        for i in range(min(a,b), 0, -1):
+            if a%i == 0 and b%i==0:
+                gcd = i
+                break
+        
+        return gcd
+    
+# Euclidean Algorithms
+
+'''
+gcd(a,b) = gcd(a-b,b) where a>b
+'''
+
+class Solution:
+    def gcd(self, a, b):
+        # code here
+        
+        while a>0 and b>0:
+            if a>b:
+                a = a%b
+            else:
+                b = b%a
+        
+        if a==0:
+            return b
+        else:
+            return a
+        
+# -----------------------------------------------
+'''
+Leetcode
+1979. Find Greatest Common Divisor of Array
+
+TC:- O(logPhi(min(a,b)))
+'''
+
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        b = min(nums)
+        a = max(nums)
+        ans  = 0
+        while a>0 and b>0:
+            if a>b:
+                a = a%b
+            else:
+                b = b%a
+        if a == 0:
+            ans = b
+        else:
+            ans = a
+        return ans   

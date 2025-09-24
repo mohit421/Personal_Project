@@ -4,7 +4,9 @@ Print ALl Divisor :- https://www.geeksforgeeks.org/problems/all-divisors-of-a-nu
 '''
 
 # Solution 1 Brute force
+'''
 
+'''
 
 class Solution:
     def print_divisors(self, N):
@@ -31,6 +33,10 @@ Check if ‘i’ is a divisor of ‘n’ by checking if ‘n’ is divisible by 
 If i is a divisor, add it to the vectors of divisors.
 If i is different from n/i add the counterpart divisor n/i to the vector of divisors.
 
+'''
+
+'''
+TC:- O(no of factor *log(no of factor)) + O(sqrt(n))
 '''
 import math
 class Solution:

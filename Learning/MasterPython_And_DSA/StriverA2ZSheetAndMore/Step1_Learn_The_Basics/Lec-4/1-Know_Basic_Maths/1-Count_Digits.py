@@ -58,3 +58,33 @@ class Solution:
             return ((d != 0 and n%d == 0 ) + helper(num//10))
         return helper(n)
     
+
+# --------------------------------------
+'''
+Leetcode:- 2520. Count the Digits That Divide a Number
+
+TC:- O(logN)
+'''
+class Solution:
+    def countDigits(self, num: int) -> int:
+        n = num
+        cnt = 0
+        while num > 0:
+            lastDigit = num % 10
+            if lastDigit != 0 and n % lastDigit == 0:
+                cnt += 1
+            num //= 10
+        return cnt
+    
+# If simply we have to count only number of didgit
+'''
+Complexity Analysis
+
+Time Complexity: O(1)as simple arithmetic operations in constant time are computed on integers.
+
+Space Complexity : O(1)as only a constant amount of additional memory for the count variable regardless of size of the input number.
+'''
+class Solution:
+    def countDigits(self, num: int) -> int:
+        cnt = (int)(log10(num)) + 1
+        return cnt

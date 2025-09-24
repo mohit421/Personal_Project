@@ -36,3 +36,49 @@ class Solution:
             return True
         else:
             return False
+
+# Optimal
+
+class Solution:
+    def isPrime(self, n):
+        
+        if n <= 1:
+            return False
+        if n == 2:
+            return True
+        if n % 2 == 0:
+            return False
+        for i in range(3, int(n**0.5) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
+
+    def distinctPrimeFactors(self, nums: List[int]) -> int:
+        
+        primes = set()
+        for num in nums:
+            d = 2
+            while d * d <= num:
+                while num % d == 0:
+                    primes.add(d)
+                    num //= d
+                d += 1
+            if num > 1:
+                primes.add(num)
+        return len(primes)
+
+
+        
+
+
+        
+
+# libraries
+
+from sympy import factorint
+
+def distinctPrimeFactors(nums):
+    primes = set()
+    for num in nums:
+        primes.update(factorint(num).keys())
+    return len(primes)
