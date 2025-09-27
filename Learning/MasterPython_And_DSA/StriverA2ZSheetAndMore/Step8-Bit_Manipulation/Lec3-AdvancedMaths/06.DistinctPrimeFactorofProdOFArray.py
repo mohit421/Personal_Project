@@ -4,6 +4,8 @@ Distinct prime factor of a product of an array
 
 # Brute force 
 
+
+
 class Solution:
     def distinctPrimeFactors(self, nums: List[int]) -> int:
         def is_prime(n):
@@ -27,3 +29,7 @@ class Solution:
                 if is_prime(i):
                     cnt += 1
         return cnt
+    
+
+# better
+

@@ -46,7 +46,7 @@ class Solution:
 '''
 Prime harmonic series
 TC:- O(N) +  (Nlog(logN)) + O(N)
-SC:- O(N)
+SC:- O(N\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\)
 '''
 class Solution:
     def countPrimes(self, n: int) -> int:
